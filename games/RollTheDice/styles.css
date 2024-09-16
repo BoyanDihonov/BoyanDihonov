@@ -1,0 +1,70 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #393E46;
+}
+
+h1 {
+  margin: 20px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 60%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
+
+/* Center the button */
+button {
+  text-align: center;
+  display: inline-block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  background-color: #ff6347; /* Tomato color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #e5533c; /* Slightly darker tomato color */
+  transform: translateY(-3px);
+}
+
+/* Button active effect */
+button:active {
+  background-color: #c44a30;
+  transform: translateY(1px);
+}
