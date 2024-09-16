@@ -18,8 +18,8 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    padding-left: 150px; /* Adjust to make space for the image */
-    text-align: left; /* Align text to the left */
+    padding-left: 150px;
+    text-align: left; 
 }
 
 .profile-pic {
@@ -62,7 +62,7 @@ nav a.active {
 }
 
 .content {
-    display: block; /* Ensure content is visible on the home page */
+    display: block; 
     padding: 40px 20px;
     background-color: #e6f7ff;
     border-radius: 8px;
