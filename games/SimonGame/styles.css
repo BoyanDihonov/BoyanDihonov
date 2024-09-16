@@ -54,7 +54,7 @@ body {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #0074b8;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -64,5 +64,5 @@ body {
 }
 
 .button:hover {
-  background-color: #45a049;
+  background-color: #082ccc;
 }
