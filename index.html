@@ -1,90 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
 
-    <header>
-        <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
-        <h1>My Portfolio</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-    <nav>
-        <a href="./index.html" onclick="showContent('home')" class="active">Home</a>
-        <a href="./pages/apps.html" onclick="showContent('apps')">Apps</a>
-        <a href="./pages/games.html" onclick="showContent('games')">Games</a>
-        <a href="#" onclick="showContent('pages')">Pages</a>
-    </nav>
+    <body>
 
-    <div id="home" class="content active">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hello! I'm Boyan Dihonov, and this is my portfolio showcasing my work and projects. Please explore the sections below to learn more about the apps, games, and web pages I've created.</p>
+        <header>
+            <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
+            <h1>My Portfolio</h1>
+        </header>
 
-        <section>
-            <h3>Featured Apps</h3>
-            <ul class="apps-list">
-                <li>
-                    <h4>App 1: Task Manager</h4>
-                    <p>A comprehensive task management app that helps users organize their daily tasks and improve productivity.</p>
-                </li>
-                <li>
-                    <h4>App 2: Fitness Tracker</h4>
-                    <p>An app that tracks workouts, monitors progress, and provides fitness tips to help users achieve their health goals.</p>
-                </li>
-                <li>
-                    <h4>App 3: Budget Planner</h4>
-                    <p>A budgeting app that allows users to manage their finances, track expenses, and set financial goals.</p>
-                </li>
-            </ul>
-        </section>
+        <nav>
+            <a href="./index.html" onclick="showContent('home')" class="active">Home</a>
+            <a href="./pages/apps.html" onclick="showContent('apps')">Apps</a>
+            <a href="./pages/games.html" onclick="showContent('games')">Games</a>
+            <a href="#" onclick="showContent('pages')">Pages</a>
+        </nav>
 
-        <section>
-            <h3>Featured Games</h3>
-            <p>Coming soon! Stay tuned for details about the games I’ve developed.</p>
-        </section>
+        <div id="home" class="content active">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello! I'm Boyan Dihonov, and this is my portfolio showcasing my work and projects. Please explore the
+                sections below to learn more about the apps, games, and web pages I've created.</p>
 
-        <section>
-            <h3>Featured Pages</h3>
-            <p>Coming soon! Stay tuned for details about the web pages I've designed.</p>
-        </section>
-    </div>
 
-    <div id="apps" class="content">
-        <h2>Apps</h2>
-        <p>Here are some of the apps I've worked on:</p>
-        <ul class="apps-list">
-            <li>
-                <h3>App 1: Task Manager</h3>
-                <img src="task-manager.jpg" alt="Task Manager App" class="app-image">
-                <p>A comprehensive task management app that helps users organize their daily tasks and improve productivity.</p>
-            </li>
-            <li>
-                <h3>App 2: Fitness Tracker</h3>
-                <img src="fitness-tracker.jpg" alt="Fitness Tracker App" class="app-image">
-                <p>An app that tracks workouts, monitors progress, and provides fitness tips to help users achieve their health goals.</p>
-            </li>
-            <li>
-                <h3>App 3: Budget Planner</h3>
-                <img src="budget-planner.jpg" alt="Budget Planner App" class="app-image">
-                <p>A budgeting app that allows users to manage their finances, track expenses, and set financial goals.</p>
-            </li>
-        </ul>
-    </div>
+            <script src="script.js"></script>
+    </body>
 
-    <div id="games" class="content">
-        <h2>Games</h2>
-        <p>Coming soon! Stay tuned for details about the games I’ve developed.</p>
-    </div>
-
-    <div id="pages" class="content">
-        <h2>Pages</h2>
-        <p>Coming soon! Stay tuned for details about the web pages I've designed.</p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
 </html>
