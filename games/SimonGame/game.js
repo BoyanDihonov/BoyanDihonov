@@ -1,4 +1,3 @@
-
 var buttonColors = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
@@ -16,7 +15,6 @@ $(document).keypress(function () {
 });
 
 $(".btn").click(function () {
-
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
 
@@ -27,7 +25,6 @@ $(".btn").click(function () {
 });
 
 function checkAnswer(currentLevel) {
-
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(function () {
@@ -46,7 +43,6 @@ function checkAnswer(currentLevel) {
         startOver();
     }
 }
-
 
 function nextSequence() {
     userClickedPattern = [];
