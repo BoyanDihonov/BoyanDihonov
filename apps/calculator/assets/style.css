@@ -9,9 +9,8 @@ body {
 }
 
 .calculator {
-    width: 320px;
-    height: 450px;
-    /* Adjust height to fit the buttons */
+    width: 320;
+    height: 480px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -19,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Distribute space evenly */
 }
 
 .display {
@@ -32,9 +30,7 @@ body {
 .display input {
     width: 100%;
     height: 60px;
-    /* Adjusted for better visibility */
     text-align: center;
-    /* Center text horizontally */
     font-size: 1.5em;
     border: none;
     border-radius: 5px;
@@ -46,13 +42,9 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Four equal columns */
     grid-template-rows: repeat(5, 1fr);
-    /* Five equal rows */
     gap: 10px;
-    /* Space between buttons */
     flex-grow: 1;
-    /* Make buttons fill the remaining space */
 }
 
 button {
@@ -74,6 +66,7 @@ button:active {
     background-color: #c8c8c8;
 }
 
+
 button:nth-child(4n) {
     background-color: #ffa726;
     color: white;
@@ -87,6 +80,7 @@ button:nth-child(4n):active {
     background-color: #fb8c00;
 }
 
+
 button:nth-last-child(2) {
     background-color: #e57373;
     color: white;
@@ -98,4 +92,26 @@ button:nth-last-child(2):hover {
 
 button:nth-last-child(2):active {
     background-color: #f44336;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 2em;
+    border: none;
+    border-radius: 15px;
+    background-color: #42a5f5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 80%;
+    align-self: center;
+}
+
+.back-button:hover {
+    background-color: #1e88e5;
+}
+
+.back-button:active {
+    background-color: #1565c0;
 }
