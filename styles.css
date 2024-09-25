@@ -19,7 +19,7 @@ header h1 {
     margin: 0;
     font-size: 2.5em;
     padding-left: 150px;
-    text-align: left; 
+    text-align: left;
 }
 
 .profile-pic {
@@ -62,7 +62,7 @@ nav a.active {
 }
 
 .content {
-    display: block; 
+    display: block;
     padding: 40px 20px;
     background-color: #e6f7ff;
     border-radius: 8px;
@@ -114,6 +114,7 @@ nav a.active {
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -134,8 +135,13 @@ nav a.active {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 5px;
-    border-radius: 5px; 
+    font-size: 16px;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    line-height: 1.5;
 }
