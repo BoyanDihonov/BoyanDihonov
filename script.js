@@ -25,5 +25,9 @@ function updateClock() {
     document.getElementById('clock').innerHTML = `${timeString}<br>${dateString}`;
 }
 
+function openMessengerChat() {
+    window.open('https://m.me/BoyanDihonov', '_blank');
+}
+
 setInterval(updateClock, 1000);
 updateClock();
