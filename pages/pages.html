@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Games - Portfolio</title>
-        <link rel="stylesheet" href="../styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pages - Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <img src="../pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
-            <h1>My Portfolio</h1>
-        </header>
-        <div id="clock" class="clock"></div>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="apps.html">Apps</a>
-            <a href="games.html">Games</a>
-            <a href="pages.html" class="active">Pages</a>
-        </nav>
-
-        <div class="content active">
-            <h2>Pages</h2>
-            <p>Nothing to show yet 😔</p>
-
+    <header>
+        <div class="profile-container">
+            <img src="../pictures/profile.jpg" alt="My Profile Picture" class="profile-pic" onclick="openMessengerChat()">
+            <div class="chat-tooltip">Click me to chat</div>
         </div>
+        <h1>My Portfolio</h1>
+    </header>
+    
+    <div id="clock" class="clock"></div>
 
-        <script src="../script.js"></script>
-    </body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="apps.html">Apps</a>
+        <a href="games.html">Games</a>
+        <a href="pages.html" class="active">Pages</a>
+    </nav>
+
+    <div class="content active">
+        <h2>Pages</h2>
+        <p>Nothing to show yet 😔</p>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
 
 </html>
