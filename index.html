@@ -11,7 +11,8 @@
 <body>
 
     <header>
-        <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
+        <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic" 
+             onclick="openMessengerChat()">
         <h1>My Portfolio</h1>
     </header>
 
@@ -48,14 +49,20 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <!-- Your Chat Plugin code -->
     <div class="fb-customerchat"
          attribution="setup_tool"
-         page_id="YOUR_FACEBOOK_PAGE_ID"
+         page_id="BoyanDihonov"
          theme_color="#0084ff"
          logged_in_greeting="Hi! How can I help you?"
          logged_out_greeting="Hi! How can I help you?">
     </div>
+
+    <!-- JavaScript for Messenger -->
+    <script>
+        function openMessengerChat() {
+            window.open('https://m.me/BoyanDihonov', '_blank');
+        }
+    </script>
 
     <script src="script.js"></script>
 
