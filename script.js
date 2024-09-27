@@ -1,33 +1,31 @@
-function showContent(tab) {
-    const contents = document.querySelectorAll('.content');
-    contents.forEach(content => content.classList.remove('active'));
-
-    document.getElementById(tab).classList.add('active');
+function showContent(contentId) {
+    const contentSections = document.querySelectorAll('.content');
+    contentSections.forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById(contentId).classList.add('active');
 
     const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => link.classList.remove('active'));
-    document.querySelector(`nav a[onclick="showContent('${tab}')"]`).classList.add('active');
-}
-
-function updateClock() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const dayOfWeek = now.toLocaleString('en-US', { weekday: 'long' });
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = now.toLocaleString('en-US', { month: 'long' });
-    const year = now.getFullYear();
-
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    const dateString = `${dayOfWeek}, ${month} ${day}, ${year}`;
-
-    document.getElementById('clock').innerHTML = `${timeString}<br>${dateString}`;
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    const activeLink = document.querySelector(`nav a[onclick="showContent('${contentId}')"]`);
+    if (activeLink) activeLink.classList.add('active');
 }
 
 function openMessengerChat() {
-    window.open('https://m.me/BoyanDihonov', '_blank');
+    FB.CustomerChat.showDialog();
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+function startClock() {
+    const clockElement = document.getElementById('clock');
+    if (clockElement) {
+        setInterval(() => {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            clockElement.textContent = timeString;
+        }, 1000);
+    }
+}
+
+startClock();
