@@ -12,13 +12,16 @@
 
     <header>
         <div class="profile-container">
-            <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic" onclick="openMessengerChat()">
-            <div class="chat-tooltip">Click me to chat</div>
+            <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
+            <button class="chat-button" onclick="openMessengerChat()">Chat with me</button>
         </div>
         <h1>My Portfolio</h1>
     </header>
 
-    <div id="clock" class="clock"></div>
+    <div id="time-container" class="time-container">
+        <span id="clock" class="clock"></span>
+        <span id="date" class="date"></span>
+    </div>
 
     <nav>
         <a href="./index.html" onclick="showContent('home')" class="active">Home</a>
