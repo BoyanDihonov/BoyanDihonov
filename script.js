@@ -19,11 +19,14 @@ function openMessengerChat() {
 
 function startClock() {
     const clockElement = document.getElementById('clock');
-    if (clockElement) {
+    const dateElement = document.getElementById('date');
+    if (clockElement && dateElement) {
         setInterval(() => {
             const now = new Date();
             const timeString = now.toLocaleTimeString();
+            const dateString = now.toLocaleDateString();
             clockElement.textContent = timeString;
+            dateElement.textContent = dateString;
         }, 1000);
     }
 }
