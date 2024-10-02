@@ -82,3 +82,19 @@ footer nav a:hover {
 
     }
 }
+.buttonback{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    
+}
+.buttonback:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px); 
+}
