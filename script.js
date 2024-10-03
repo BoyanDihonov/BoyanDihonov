@@ -1,3 +1,7 @@
+function openMessengerChat() {
+    window.open('https://m.me/BoyanDihonov', '_blank');
+}
+
 function showContent(contentId) {
     const contentSections = document.querySelectorAll('.content');
     contentSections.forEach(section => {
@@ -11,14 +15,6 @@ function showContent(contentId) {
     });
     const activeLink = document.querySelector(`nav a[onclick="showContent('${contentId}')"]`);
     if (activeLink) activeLink.classList.add('active');
-}
-
-function openMessengerChat() {
-    if (typeof FB !== 'undefined' && FB.CustomerChat) {
-        FB.CustomerChat.showDialog();
-    } else {
-        console.error("Facebook SDK not loaded or CustomerChat not available.");
-    }
 }
 
 function startClock() {
