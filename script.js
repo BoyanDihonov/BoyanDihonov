@@ -14,7 +14,11 @@ function showContent(contentId) {
 }
 
 function openMessengerChat() {
-    FB.CustomerChat.showDialog();
+    if (typeof FB !== 'undefined' && FB.CustomerChat) {
+        FB.CustomerChat.showDialog();
+    } else {
+        console.error("Facebook SDK not loaded or CustomerChat not available.");
+    }
 }
 
 function startClock() {
