@@ -1,41 +1,40 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <div class="profile-container">
-                <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
-                <button class="chat-button" onclick="openMessengerChat()">Chat with me</button>
-            </div>
-            <h1>My Portfolio</h1>
-        </header>
-
-        <div id="time-container" class="time-container">
-            <span id="clock" class="clock"></span>
-            <span id="date" class="date"></span>
+    <header>
+        <div class="profile-container">
+            <img src="./pictures/profile.jpg" alt="My Profile Picture" class="profile-pic">
+            <button class="chat-button" onclick="openMessengerChat()">Chat with me</button>
         </div>
+        <h1>My Portfolio</h1>
+    </header>
 
-        <nav>
-            <a href="./index.html" onclick="showContent('home')" class="active">Home</a>
-            <a href="./pages/apps.html" onclick="showContent('apps')">Apps</a>
-            <a href="./pages/games.html" onclick="showContent('games')">Games</a>
-            <a href="./pages/pages.html" onclick="showContent('pages')">Pages</a>
-        </nav>
+    <div id="time-container" class="time-container">
+        <span id="clock" class="clock"></span>
+        <span id="date" class="date"></span>
+    </div>
 
-        <div id="home" class="content active">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hello! I'm Boyan Dihonov, and this is my portfolio showcasing my work and projects. Please explore the sections above to learn more about the apps, games, and web pages I've created.</p>
-        </div>
+    <nav>
+        <a href="./index.html" onclick="showContent('home')" class="active">Home</a>
+        <a href="./pages/apps.html" onclick="showContent('apps')">Apps</a>
+        <a href="./pages/games.html" onclick="showContent('games')">Games</a>
+        <a href="./pages/pages.html" onclick="showContent('pages')">Pages</a>
+    </nav>
 
-        <footer>
+    <div id="home" class="content active">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hello! I'm Boyan Dihonov, and this is my portfolio showcasing my work and projects. Please explore the sections above to learn more about the apps, games, and web pages I've created.</p>
+
+        <div id="carousel-container">
             <div id="carousel" class="carousel">
                 <div class="slide" style="background-image: url('./pictures/carousel/pic1.png');"></div>
                 <div class="slide" style="background-image: url('./pictures/carousel/pic2.svg');"></div>
@@ -43,30 +42,36 @@
                 <div class="slide" style="background-image: url('./pictures/carousel/pic4.png');"></div>
                 <div class="slide" style="background-image: url('./pictures/carousel/pic5.png');"></div>
             </div>
-        </footer>
+        </div>
 
-        <div id="fb-root"></div>
-        <script>
-            window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '100001705041476',
-                    xfbml: true,
-                    version: 'v13.0'
-                });
-            };
+    </div>
 
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = document.createElement(s);
-                js.id = id;
-                js.src = 'https://connect.facebook.net/en_US/sdk.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+    <footer>
+        <p>© 2024 My Portfolio</p>
+    </footer>
 
-        <script src="script.js"></script>
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '100001705041476',
+                xfbml: true,
+                version: 'v13.0'
+            });
+        };
 
-    </body>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = document.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-    </html>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
