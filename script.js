@@ -14,31 +14,17 @@ function showContent(contentId) {
         link.classList.remove('active');
     });
     const activeLink = document.querySelector(`nav a[onclick="showContent('${contentId}')"]`);
-    if (activeLink) activeLink.classList.add('active');
+    activeLink.classList.add('active');
 }
-
-function startClock() {
-    const clockElement = document.getElementById('clock');
-    const dateElement = document.getElementById('date');
-    if (clockElement && dateElement) {
-        setInterval(() => {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString();
-            const dateString = now.toLocaleDateString();
-            clockElement.textContent = timeString;
-            dateElement.textContent = dateString;
-        }, 1000);
-    }
-}
-
-startClock();
 
 let currentSlide = 0;
+
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
-    slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? '1' : '0';
+    slides.forEach(slide => {
+        slide.style.display = 'none';
     });
+    slides[index].style.display = 'block';
 }
 
 function nextSlide() {
@@ -47,5 +33,16 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 2000);
+setInterval(nextSlide, 1500);
 showSlide(currentSlide);
+
+function updateClockAndDate() {
+    const clockElement = document.getElementById('clock');
+    const dateElement = document.getElementById('date');
+    const now = new Date();
+    clockElement.textContent = now.toLocaleTimeString();
+    dateElement.textContent = now.toLocaleDateString();
+}
+
+setInterval(updateClockAndDate, 1000);
+updateClockAndDate();
