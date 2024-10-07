@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Games - Portfolio</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
 
-    <header>
-        <div class="profile-container">
-            <img src="../pictures/profile.jpg" alt="My Profile Picture" class="profile-pic" onclick="openMessengerChat()">
-            <button class="chat-button" onclick="openMessengerChat()">Chat with me</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Games - Portfolio</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="profile-container">
+                <img src="../pictures/profile.jpg" alt="My Profile Picture" class="profile-pic"
+                    onclick="openMessengerChat()">
+                <button class="chat-button" onclick="openMessengerChat()">Chat with me</button>
+            </div>
+            <h1>My Portfolio</h1>
+        </header>
+
+        <div id="time-container" class="time-container">
+            <span id="clock" class="clock"></span>
+            <span id="date" class="date"></span>
         </div>
-        <h1>My Portfolio</h1>
-    </header>
 
-    <div id="time-container" class="time-container">
-        <span id="clock" class="clock"></span>
-        <span id="date" class="date"></span>
-    </div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="apps.html">Apps</a>
+            <a href="games.html" class="active">Games</a>
+            <a href="pages.html">Pages</a>
+        </nav>
 
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="apps.html">Apps</a>
-        <a href="games.html" class="active">Games</a>
-        <a href="pages.html">Pages</a>
-    </nav>
+        <div class="content active">
+            <h2>Games</h2>
+            <p>Here are some of the games I've worked on:</p>
+            <ul class="apps-list">
+                <li>
+                    <button class="button" onclick="location.href='../games/SimonGame/index.html'">Simon Game</button>
+                    <button class="button" onclick="location.href='../games/RollTheDice/dicee.html'">Roll The
+                        Dice</button>
+                </li>
+            </ul>
+        </div>
+        <div id="carousel-container">
+            <div id="carousel" class="carousel">
+                <div class="slide" style="background-image: url('../pictures/carousel/pic1.png');"></div>
+                <div class="slide" style="background-image: url('../pictures/carousel/pic2.svg');"></div>
+                <div class="slide" style="background-image: url('../pictures/carousel/pic3.png');"></div>
+                <div class="slide" style="background-image: url('../pictures/carousel/pic4.png');"></div>
+                <div class="slide" style="background-image: url('../pictures/carousel/pic5.png');"></div>
+            </div>
+        </div>
+        <script src="../script.js"></script>
+    </body>
 
-    <div class="content active">
-        <h2>Games</h2>
-        <p>Here are some of the games I've worked on:</p>
-        <ul class="apps-list">
-            <li>
-                <button class="button" onclick="location.href='../games/SimonGame/index.html'">Simon Game</button>
-                <button class="button" onclick="location.href='../games/RollTheDice/dicee.html'">Roll The Dice</button>
-            </li>
-        </ul>
-    </div>
-
-    <script src="../script.js"></script>
-</body>
 </html>
