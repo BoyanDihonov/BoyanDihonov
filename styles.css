@@ -235,3 +235,28 @@ footer {
         padding: 10px;
     }
 }
+.button {
+    background-color: #0078ff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 120, 255, 0.3);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 120, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    background-color: #003f8a;
+    box-shadow: 0 3px 8px rgba(0, 120, 255, 0.5);
+    transform: translateY(1px);
+}
