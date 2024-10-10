@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Name Distance Calculator using OpenStreetMap</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h3>City Name Distance Calculator using OpenStreetMap</h3>
+    
+    <div>
+        <label for="origin">Origin: </label>
+        <input type="text" id="origin" placeholder="Enter city name (e.g., New York)">
+        <label for="destination">Destination: </label>
+        <input type="text" id="destination" placeholder="Enter city name (e.g., Los Angeles)">
+        <button onclick="calculateDistance()">Calculate Distance</button>
+    </div>
+    
+    <div id="map"></div>
+    <div id="output"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        var map = L.map('map').setView([20.0, 0.0], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        function getCoordinates(city, callback) {
+            const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        const lat = parseFloat(data[0].lat);
+                        const lon = parseFloat(data[0].lon);
+                        callback(null, { lat, lon });
+                    } else {
+                        callback('City not found');
+                    }
+                })
+                .catch(error => {
+                    callback('Error fetching data');
+                });
+        }
+
+        function haversineDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371;
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c;
+        }
+
+        function calculateDistance() {
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+
+            if (!origin || !destination) {
+                document.getElementById('output').innerHTML = 'Please enter both origin and destination.';
+                return;
+            }
+
+            getCoordinates(origin, (error, originCoords) => {
+                if (error) {
+                    document.getElementById('output').innerHTML = `Error finding origin: ${error}`;
+                    return;
+                }
+
+                getCoordinates(destination, (error, destinationCoords) => {
+                    if (error) {
+                        document.getElementById('output').innerHTML = `Error finding destination: ${error}`;
+                        return;
+                    }
+
+                    const distance = haversineDistance(
+                        originCoords.lat,
+                        originCoords.lon,
+                        destinationCoords.lat,
+                        destinationCoords.lon
+                    ).toFixed(2);
+
+                    document.getElementById('output').innerHTML = `Distance: ${distance} km`;
+
+                    const bounds = L.latLngBounds(
+                        [originCoords.lat, originCoords.lon],
+                        [destinationCoords.lat, destinationCoords.lon]
+                    );
+                    map.fitBounds(bounds);
+
+                    L.marker([originCoords.lat, originCoords.lon]).addTo(map).bindPopup('Origin').openPopup();
+                    L.marker([destinationCoords.lat, destinationCoords.lon]).addTo(map).bindPopup('Destination').openPopup();
+                });
+            });
+        }
+    </script>
+</body>
+</html>
