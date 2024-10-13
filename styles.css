@@ -114,9 +114,32 @@ nav a.active {
 }
 
 footer {
-    text-align: center;
+    background: linear-gradient(45deg, #f2f6fa, #dfe7ef); 
     padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-top: none; 
 }
+
+footer .contacts {
+    margin-top: 10px;
+    font-size: 1.1em; 
+    color: #555; 
+}
+
+footer a {
+    color: #2575fc; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0056b3; 
+    text-decoration: underline;
+}
+
 
 .time-container {
     text-align: right;
@@ -281,3 +304,4 @@ footer {
     color: #555;
     line-height: 1.6;
 }
+
