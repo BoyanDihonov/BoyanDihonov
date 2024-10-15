@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свържете се с ИзоСтрой за строителни услуги, ремонт и изолации.">
+    <title>Контакти - ИзоСтрой</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Контакти</h1>
+        <p>Свържете се с нас за повече информация или за да заявите нашите услуги.</p>
+        <nav>
+            <a href="../index.html">Начало</a>
+            <a href="./services.html">Услуги</a>
+            <a href="#contact-form">Форма за контакт</a>
+        </nav>
+    </header>
+
+    <section id="contact-details">
+        <h2>Нашата информация за контакт</h2>
+        <p>Ако имате въпроси, искате оферта или се нуждаете от консултация, можете да се свържете с нас по няколко начина:</p>
+        <ul>
+            <li><strong>Телефон:</strong> +359 888 123 456</li>
+            <li><strong>Имейл:</strong> info@izostroi.bg</li>
+            <li><strong>Адрес на офиса:</strong> София, бул. България 100</li>
+            <li><strong>Работно време:</strong> Понеделник - Петък, 9:00 - 18:00</li>
+        </ul>
+    </section>
+
+    <section id="contact-form">
+        <h2>Форма за контакт</h2>
+        <form action="/submit-contact" method="POST">
+            <label for="name">Име:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Имейл:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Съобщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Изпрати</button>
+        </form>
+    </section>
+
+    <section id="map">
+        <h2>Нашето местоположение</h2>
+        <p>Можете да ни намерите на картата:</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509434!2d144.95373631549084!3d-37.8162796797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1a5e5b1%3A0x2f5736b8172f3187!2sBulgaria!5e0!3m2!1sen!2sbg!4v1641489340627!5m2!1sen!2sbg" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="buttonback">Обратно към началната страница</a>
+        <p>&copy; 2024 ИзоСтрой - Всички права запазени.</p>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
