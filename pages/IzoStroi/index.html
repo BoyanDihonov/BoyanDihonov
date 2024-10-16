@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="bg">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Свържете се с ИзоСтрой за строителни услуги, ремонт и изолации.">
-        <title>Начална страница - ИзоСтрой</title>
-        <link rel="stylesheet" href="./styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свържете се с ИзоСтрой за строителни услуги, ремонт и изолации.">
+    <title>Начална страница - ИзоСтрой</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <h1>Добре дошли в ИзоСтрой</h1>
+    <header>
+        <div class="logo">
+            <h1>ИзоСтрой</h1>
+        </div>
+        <nav>
+            <a href="./index.html">Начало</a>
+            <a href="./pages/gallery.html">Галерия</a>
+            <a href="./pages/services.html">Услуги</a>
+            <a href="./pages/contacts.html">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Добре дошли в ИзоСтрой</h2>
             <p>Ние предлагаме качествени строителни услуги, ремонт и изолации.</p>
-            <nav>
-                <a href="./index.html">Начало</a>
-                <a href="./pages/gallery.html">Галерия</a>
-                <a href="./pages/services.html">Услуги</a>
-                <a href="./pages/contacts.html">Контакти</a>
-            </nav>
-        </header>
+            <a href="./pages/services.html" class="cta-button">Научете повече</a>
+        </section>
 
-        <section id="services-intro">
+        <section id="services-intro" class="services-section">
             <h2>Нашите услуги</h2>
             <p>ИзоСтрой предлага разнообразие от строителни услуги, включително:</p>
             <ul>
@@ -33,26 +41,26 @@
             </ul>
         </section>
 
-        <section id="about">
+        <section id="about" class="about-section">
             <h2>За нас</h2>
-            <p>Ние сме екип от опитни специалисти, които се стремят да предоставят най-доброто обслужване на клиентите.
-            </p>
+            <p>Ние сме екип от опитни специалисти, които се стремят да предоставят най-доброто обслужване на клиентите.</p>
         </section>
 
         <section id="gallery">
             <h2>Галерия</h2>
             <p>Погледнете нашите завършени проекти:</p>
-            <a href="./pages/gallery.html">Вижте галерията</a>
+            <a href="./pages/gallery.html" class="cta-button">Вижте галерията</a>
         </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 ИзоСтрой - Всички права запазени.</p>
-            <nav>
-                <a href="./pages/contacts.html">Контакти</a>
-            </nav>
-        </footer>
+    <footer>
+        <p>&copy; 2024 ИзоСтрой - Всички права запазени.</p>
+        <nav>
+            <a href="./pages/contacts.html">Контакти</a>
+        </nav>
+    </footer>
 
-        <script src="./scripts.js"></script>
-    </body>
+    <script src="./scripts.js"></script>
+</body>
 
 </html>
