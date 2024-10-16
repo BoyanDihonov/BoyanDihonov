@@ -151,13 +151,15 @@ footer a:hover {
 }
 
 h3 {
-    color: black
+    color: black;
 }
 
 p {
     color: black;
 }
+
 .chat-button {
+    display: none;
     background-color: #1e90ff;
     color: white;
     padding: 10px 15px;
@@ -168,4 +170,20 @@ p {
 
 .chat-button:hover {
     background-color: #0056b3;
+}
+
+@media only screen and (max-width: 768px) {
+    .chat-button {
+        display: block;
+    }
+
+    .services {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .service {
+        width: 90%; 
+        max-width: 400px; 
+    }
 }
