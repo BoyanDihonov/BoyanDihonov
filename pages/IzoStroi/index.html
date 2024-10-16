@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html lang="bg">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Свържете се с ИзоСтрой за строителни услуги, ремонт и изолации.">
-    <title>Начална страница - ИзоСтрой</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Изо Строй - Ремонтни услуги</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
-
 <body>
 
     <header>
-        <div class="logo">
-            <h1>ИзоСтрой</h1>
-        </div>
         <nav>
             <a href="./index.html">Начало</a>
-            <a href="./pages/gallery.html">Галерия</a>
+            <a href="./pages/about.html">За нас</a>
             <a href="./pages/services.html">Услуги</a>
             <a href="./pages/contacts.html">Контакти</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>Добре дошли в ИзоСтрой</h2>
-            <p>Ние предлагаме качествени строителни услуги, ремонт и изолации.</p>
-            <a href="./pages/services.html" class="cta-button">Научете повече</a>
-        </section>
+    <section id="about">
+        <h1>Изо Строй - Професионални ремонтни услуги</h1>
+        <p>Фирма "Изо Строй" предлага висококачествени ремонтни услуги за дома и офиса. Нашият екип от професионалисти има богат опит в извършването на различни видове ремонти – от основен ремонт до довършителни работи. Ние работим с качествени материали и се стремим да постигнем високи стандарти във всяка задача, която поемаме.</p>
+    </section>
 
-        <section id="services-intro" class="services-section">
-            <h2>Нашите услуги</h2>
-            <p>ИзоСтрой предлага разнообразие от строителни услуги, включително:</p>
-            <ul>
-                <li>Строителство на нови сгради</li>
-                <li>Ремонт на стари сгради</li>
-                <li>Изолации и хидроизолации</li>
-                <li>Проектиране и консултации</li>
-            </ul>
-        </section>
+    <section id="services">
+        <h2>Нашите услуги</h2>
+        <ul>
+            <li>Вътрешни ремонти</li>
+            <li>Саниране на сгради</li>
+            <li>Ремонт на покриви</li>
+            <li>Монтаж на дограма</li>
+        </ul>
+    </section>
 
-        <section id="about" class="about-section">
-            <h2>За нас</h2>
-            <p>Ние сме екип от опитни специалисти, които се стремят да предоставят най-доброто обслужване на клиентите.</p>
-        </section>
-
-        <section id="gallery">
-            <h2>Галерия</h2>
-            <p>Погледнете нашите завършени проекти:</p>
-            <a href="./pages/gallery.html" class="cta-button">Вижте галерията</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 ИзоСтрой - Всички права запазени.</p>
-        <nav>
-            <a href="./pages/contacts.html">Контакти</a>
-        </nav>
+    <footer id="contacts">
+        <p>Телефон за контакти: +359 888 123 456</p>
+        <a href="https://www.facebook.com/profile.php?id=61556035553230" target="_blank">
+            <img src="./gallery/fb.png" alt="Facebook" class="social-icon"> Facebook
+        </a>
     </footer>
 
-    <script src="./scripts.js"></script>
 </body>
-
 </html>
