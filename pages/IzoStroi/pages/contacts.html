@@ -24,28 +24,16 @@
         <h2>Нашата информация за контакт</h2>
         <p>Ако имате въпроси, искате оферта или се нуждаете от консултация, можете да се свържете с нас по няколко начина:</p>
         <ul>
+            <li>
+                <button id="chatBtn" class="chat-button">Чат с нас</button>
+            </li>
             <li><strong>Телефон:</strong> +359 888 123 456</li>
             <li><strong>Имейл:</strong> info@izostroi.bg</li>
             <li><strong>Адрес на офиса:</strong> София, бул. България 100</li>
             <li><strong>Работно време:</strong> Понеделник - Петък, 9:00 - 18:00</li>
         </ul>
     </section>
-
-    <section id="contact-form">
-        <h2>Форма за контакт</h2>
-        <form action="/submit-contact" method="POST">
-            <label for="name">Име:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Имейл:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Съобщение:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Изпрати</button>
-        </form>
-    </section>
+    
 
     <section id="map">
         <h2>Нашето местоположение</h2>
@@ -64,6 +52,16 @@
         <a href="../index.html" class="buttonback">Обратно към началната страница</a>
         <p>&copy; 2024 ИзоСтрой - Всички права запазени.</p>
     </footer>
+
+    <div id="chatForm" class="chat-popup">
+        <form class="form-container">
+            <h2>Чат с нас</h2>
+            <label for="msg"><b>Вашето съобщение</b></label>
+            <textarea id="msg" placeholder="Напишете съобщение..." required></textarea>
+            <button type="submit" class="btn">Изпрати</button>
+            <button type="button" class="btn cancel" onclick="closeChat()">Затвори</button>
+        </form>
+    </div>
 
     <script src="../scripts.js"></script>
 </body>
