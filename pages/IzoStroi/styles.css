@@ -2,19 +2,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;
     color: #333;
 }
 
 header {
     background-color: #1e90ff;
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
 nav {
@@ -22,35 +25,48 @@ nav {
     justify-content: center;
     background-color: #333;
     padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #ff6347;
 }
 
 section {
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
+    background-color: #fafafa;
+    border-top: 5px solid #1e90ff;
 }
 
 .services {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 .service {
-    background-color: white;
+    background-color: #fff;
     margin: 15px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -62,6 +78,25 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.buttonback{
+
+footer a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.buttonback {
     color: aliceblue;
+    background-color: #ff6347;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.buttonback:hover {
+    background-color: #ff4500;
 }
