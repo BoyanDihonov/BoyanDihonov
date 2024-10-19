@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Кафе-аперитив</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе-аперитив</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
 
-    <body>
+<body>
+    <header>
         <h1>Кафе-аперитив</h1>
-        <p>Нашето меню</p>
+    </header>
 
-        <img src="" alt="Меню" />
-        <a href="../../index.html"><button href="../../index.html">Назад</button></a>
-    </body>
+    <main>
+        <!-- <section class="image-section">
+            <a href="#"><img src="cafe1.jpg" alt="Кафе напитка"></a>
+            <a href="#"><img src="cafe2.jpg" alt="Напитки и храна"></a>
+            <a href="#"><img src="cafe3.jpg" alt="Кафе аперитив"></a>
+        </section> -->
+
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="../images/bar/bar1.jpg" alt="Кафе 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../images/bar/bar2.jpg" alt="Кафе 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../images/bar/bar3.jpg" alt="Кафе 3">
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
+        <a href="../../index.html" class="buttonback">Назад</a>
+    </main>
+
     <footer>
-        Телефон за връзка: 0885 621 218
+        <p>Телефон за връзка: 0885 621 218</p>
+        <nav>
+            <a href="#">Начало</a>
+            <a href="#">Контакти</a>
+            <a href="#">Меню</a>
+        </nav>
     </footer>
+
+    <script src="../../scripts.js"></script>
+</body>
 
 </html>
