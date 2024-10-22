@@ -103,7 +103,8 @@ main {
     border-radius: 10px;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -123,7 +124,8 @@ main {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -187,4 +189,58 @@ footer nav a:hover {
     display: block;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.coffee {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.coffee img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.coffee-text {
+    max-width: 400px;
+}
+
+.coffee-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.coffee-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.beer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.beer img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.beer-text {
+    max-width: 400px;
+}
+
+.beer-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.beer-text p {
+    font-size: 1rem;
+    color: #555;
 }
