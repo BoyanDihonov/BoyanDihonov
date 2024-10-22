@@ -172,34 +172,6 @@ footer nav a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .dropbtn {
-        font-size: 14px;
-    }
-
-    .dropdown-content {
-        min-width: 100%;
-    }
-
-    .carousel-container {
-        width: 100%;
-    }
-
-    .coffee img,
-    .beer img {
-        width: 100%;
-    }
-
-    .coffee-text,
-    .beer-text {
-        max-width: 100%;
-    }
-}
-
 .buttons-section .button {
     display: block;
     margin-bottom: 10px;
