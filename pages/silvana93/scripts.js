@@ -1,5 +1,5 @@
 window.onload = function () {
-    const imageFolder = 'images/';
+    const imageFolder = 'kafe/images/';
     const imageCount = 7; 
     const carousel = document.getElementById('carousel');
 
@@ -41,4 +41,3 @@ function autoSlide() {
     moveSlide(1);
     setTimeout(autoSlide, 3000);
 }
-7
