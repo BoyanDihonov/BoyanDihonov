@@ -1,22 +1,34 @@
+window.onload = function () {
+    const imageFolder = 'images/';
+    const imageCount = 7; 
+    const carousel = document.getElementById('carousel');
+
+    for (let i = 1; i <= imageCount; i++) {
+        const img = document.createElement('img');
+        img.src = `${imageFolder}kafe${i}.jpg`;
+        img.alt = `Кафе ${i}`;
+        img.classList.add('carousel-slide');
+        carousel.appendChild(img);
+    }
+
+    slides = document.querySelectorAll('.carousel-slide'); 
+    updateSlides();
+    autoSlide();
+};
+
 let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const totalSlides = slides.length;
+let slides = []; 
 
 function moveSlide(n) {
     currentSlide += n;
 
-    if (currentSlide >= totalSlides) {
+    if (currentSlide >= slides.length) {
         currentSlide = 0;
     } else if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
+        currentSlide = slides.length - 1;
     }
 
     updateSlides();
-}
-
-function autoSlide() {
-    moveSlide(1);
-    setTimeout(autoSlide, 3000);
 }
 
 function updateSlides() {
@@ -25,5 +37,8 @@ function updateSlides() {
     });
 }
 
-updateSlides();
-autoSlide();
+function autoSlide() {
+    moveSlide(1);
+    setTimeout(autoSlide, 3000);
+}
+7

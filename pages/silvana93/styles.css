@@ -17,7 +17,7 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color:rgb(1, 80, 18);
+    background-color: black;
     color: white;
 }
 
@@ -34,25 +34,6 @@ main {
     align-items: center;
 }
 
-.image-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.image-section a img {
-    width: 300px;
-    height: 250px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.image-section a img:hover {
-    transform: scale(1.05);
-}
-
 .carousel-container {
     position: relative;
     max-width: 800px;
@@ -65,7 +46,8 @@ main {
 }
 
 .carousel-slide {
-    min-width: 100%;
+    display: none;
+    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -118,7 +100,7 @@ main {
 }
 
 footer {
-    background-color: rgba(2, 189, 2, 0);
+    background-color: black;
     color: white;
     text-align: center;
     padding: 10px;
@@ -142,14 +124,11 @@ footer nav a:hover {
         font-size: 2rem;
     }
 
-    .image-section {
-        flex-direction: column;
-    }
-
     .carousel-container {
         width: 100%;
     }
 }
+
 .buttons-section .button {
     display: block;
     margin-bottom: 10px;
