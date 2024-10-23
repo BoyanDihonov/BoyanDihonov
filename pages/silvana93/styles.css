@@ -23,15 +23,8 @@ header {
 }
 
 h1 {
-    font-size: 2rem; /* Относителен размер */
+    font-size: 2rem;
     font-weight: 700;
-}
-
-.tagline {
-    font-family: 'Lobster', cursive;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #e0e0e0;
 }
 
 .dropdown {
@@ -82,6 +75,28 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-container {
@@ -235,10 +250,6 @@ footer nav a:hover {
 @media (min-width: 1024px) {
     h1 {
         font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1.5rem;
     }
 
     .carousel-container {
