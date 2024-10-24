@@ -27,6 +27,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -103,7 +104,9 @@ form {
     flex-direction: column;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -145,4 +148,41 @@ footer {
 .footer-button:hover {
     background-color: #444;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .image-text-row {
+        flex-direction: column;
+    }
+
+    .image-left, .image-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .text-right, .text-left {
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
 }
