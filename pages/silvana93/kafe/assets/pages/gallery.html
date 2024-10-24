@@ -23,25 +23,30 @@
     <section class="content">
         <h2>Галерия</h2>
         <div class="gallery-container">
-            <img src="../gallery/cafe1.jpg" alt="Кафе Силвана">
-            <img src="../gallery/cafe2.jpg" alt="Кафе Силвана">
-            <img src="../gallery/cafe3.jpg" alt="Кафе Силвана">
-            <img src="../gallery/cafe4.jpg" alt="Кафе Силвана">
-            <img src="../gallery/cafe5.jpg" alt="Кафе Силвана">
-            <img src="../gallery/cafe6.jpg" alt="Кафе Силвана">
-            <img src="../gallery/cafe7.jpg" alt="Кафе Силвана">
-
+            <img src="../gallery/cafe1.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
+            <img src="../gallery/cafe2.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
+            <img src="../gallery/cafe3.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
+            <img src="../gallery/cafe4.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
+            <img src="../gallery/cafe5.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
+            <img src="../gallery/cafe6.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
+            <img src="../gallery/cafe7.jpg" alt="Кафе Силвана" class="gallery-image" onclick="openModal(this)">
         </div>
     </section>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 
     <footer>
         <p>© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
         <div class="footer-buttons">
             <a href="tel:+359 885 621 218" class="footer-button">Направи поръчка по телефона</a>
-
-            <!-- <a href="https://www.facebook.com/yourpage" target="_blank" class="footer-button">Съобщение във Facebook</a> -->
-            <!-- <a href="https://www.othersite.com" target="_blank" class="footer-button">Посети друг сайт</a> -->
         </div>
     </footer>
+
+    <script src="../../scripts.js"></script>
 </body>
 </html>
