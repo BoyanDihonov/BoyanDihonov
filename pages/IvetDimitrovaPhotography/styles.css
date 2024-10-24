@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, h2 {
+    color: #5a5a5a;
+    text-align: center;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: #f05454;
+}
+
+.nav-menu a.active {
+    color: #f05454;
+    font-weight: bold;
+    border-bottom: 2px solid #f05454;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.headerphoto {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    transition: transform 0.5s ease;
+}
+
+.headerphoto:hover {
+    transform: scale(1.05);
+}
+
+.header p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 30%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.button {
+    background-color: #5a5a5a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f05454;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .gallery img {
+        width: 45%;
+    }
+
+    .header p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%;
+    }
+
+    .header p {
+        font-size: 1.2em;
+    }
+}
+.myphoto {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 8px;
+}
