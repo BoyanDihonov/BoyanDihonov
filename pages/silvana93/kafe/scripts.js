@@ -1,19 +1,18 @@
 let currentImageIndex = 0;
 let images = [];
 
-function openModal(imageElement) {
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
+function openModal(image) {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
     modal.style.display = "block";
-    modalImg.src = imageElement.src;
-
-    images = document.querySelectorAll(".gallery-image");
-    currentImageIndex = Array.from(images).indexOf(imageElement);
+    modalImage.src = image.src;
 }
 
 function closeModal() {
-    document.getElementById("modal").style.display = "none";
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none";
 }
+
 
 function changeSlide(n) {
     currentImageIndex += n;
