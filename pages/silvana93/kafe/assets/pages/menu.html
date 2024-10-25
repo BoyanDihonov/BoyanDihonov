@@ -1,52 +1,41 @@
 <!DOCTYPE html>
 <html lang="bg">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Меню - Кафе-Аперитив Силвана</title>
-        <link rel="stylesheet" href="../../styles.css">
-    </head>
-
-    <body>
-        <header>
-            <h1>Кафе-Аперитив "Силвана"</h1>
-            <nav>
-                <ul>
-                    <li><a href="../../cafe.html">Начало</a></li>
-                    <li><a href="./about.html">За нас</a></li>
-                    <li><a href="./menu.html" class="active">Меню</a></li>
-                    <li><a href="./gallery.html">Галерия</a></li>
-                    <li><a href="./contact.html">Контакти</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="content">
-            <h2>Меню</h2>
-            <div class="image-text-row">
-                <img src="../gallery/goreshtokafe.jpg" alt="Кафе" class="image-left">
-                <div class="text-right">
-                    <p>кафе Баристо 1.30лв</p>
-                    <p>кафе Еспресо 1.70лв</p>
-                    <p>Капучино 1.80лв</p>
-
-
-
-
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
-            <div class="footer-buttons">
-                <a href="tel:+359 885 621 218" class="footer-button">Направи поръчка по телефона</a>
-                <!-- <a href="https://www.facebook.com/yourpage" target="_blank" class="footer-button">Съобщение във Facebook</a> -->
-                <!-- <a href="https://www.othersite.com" target="_blank" class="footer-button">Посети друг сайт</a> -->
-            </div>
-        </footer>
-        <script src="../../scripts.js"></script>
-    </body>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Кафе-Аперитив Силвана</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Кафе-Аперитив "Силвана"</h1>
+        <nav>
+            <ul>
+                <li><a href="../../cafe.html">Начало</a></li>
+                <li><a href="./about.html">За нас</a></li>
+                <li><a href="./menu.html" class="active">Меню</a></li>
+                <li><a href="./gallery.html">Галерия</a></li>
+                <li><a href="./contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <h2>Меню</h2>
+        <div class="image-text-row">
+            <img src="../gallery/goreshtokafe.jpg" alt="Кафе" class="image-left" onclick="openModal(this)">
+            <img src="../images/topliNapitki.jpg" alt="Кафе" class="image-right" onclick="openModal(this)">
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
+        <div class="footer-buttons">
+            <a href="tel:+359 885 621 218" class="footer-button">Направи поръчка по телефона</a>
+        </div>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="../../scripts.js"></script>
+</body>
 </html>
