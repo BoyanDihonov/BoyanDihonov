@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Забава - Кафе-Аперитив "Силвана"</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Добре дошли в секцията за забава!</h1>
+        <nav>
+            <ul>
+                <li><a href="../../cafe.html">Начало</a></li>
+                <li><a href="./about.html">За нас</a></li>
+                <li><a href="./menu.html">Меню</a></li>
+                <li><a href="./gallery.html">Галерия</a></li>
+                <li><a href="./contact.html">Контакти</a></li>
+                <li><a href="./fun.html" class="active">Забава</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Имате нужда от малко смях?</h2>
+        <p>Изберете тема за виц и се насладете на забавлението!</p>
+
+        <div class="joke-buttons">
+            <button class="funbutton" onclick="showJoke('кафе')">Кафе</button>
+            <button class="funbutton" onclick="showJoke('бира')">Бира</button>
+            <button class="funbutton" onclick="showJoke('уиски')">Уиски</button>
+            <button class="funbutton" onclick="showJoke('работа')">Работа</button>
+            <button class="funbutton" onclick="showJoke('животни')">Животни</button>
+        </div>
+
+        <p id="joke-output" class="joke-output"></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
+        <div class="footer-buttons">
+            <a href="tel:+359 885 621 218" class="footer-button">Направи поръчка по телефона</a>
+        </div>
+    </footer>
+
+    <script src="../../fun.js"></script>
+</body>
+</html>
