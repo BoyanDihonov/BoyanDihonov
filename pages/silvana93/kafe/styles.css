@@ -194,8 +194,11 @@ footer {
     .text-left {
         width: 100%;
     }
+    nav ul {
+        justify-content: center;
+    }
     nav ul li {
-        margin: 10px 0;
+        margin: 5px;
     }
     .gallery-container {
         display: grid;
@@ -209,10 +212,11 @@ footer {
 }
 @media (max-width: 480px) {
     nav ul {
-        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
     }
     nav ul li {
-        margin: 5px 0;
+        margin: 5px;
     }
     .content {
         padding: 15px;
