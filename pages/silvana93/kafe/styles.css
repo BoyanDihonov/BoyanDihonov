@@ -234,3 +234,9 @@ footer {
         height: auto;
     }
 }
+.order-info {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #333;
+}
