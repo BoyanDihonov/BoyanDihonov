@@ -178,3 +178,35 @@ footer {
 .next {
     right: 0;
 }
+.menu-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.menu-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items {
+    max-width: 500px;
+}
+
+.menu-items h3 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-items li {
+    padding: 5px 0;
+}
+
