@@ -162,7 +162,7 @@ footer {
     color: white;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .nav-menu li {
         display: block;
         margin: 10px 0;
@@ -185,8 +185,8 @@ footer {
 
     .gallery-item {
         width: calc(100% - 10px);
-    }
-}
+    } */
+/* } */
 
 .myphoto {
     width: 250px;
@@ -244,8 +244,8 @@ footer {
     background-color: #334d84;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .button-group {
         flex-direction: column;
     }
-}
+} */
