@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Галерия - Ивет Димитрова Photography</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <img class="headerphoto" src="../main2.jpg">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Начало</a></li>
+                    <li><a href="./about.html">За мен</a></li>
+                    <li><a href="./decor.html">Декори</a></li>
+                    <li><a href="./gallery.html" class="active">Галерия</a></li>
+                    <li><a href="./contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <section id="gallery">
+                <h2>Галерия</h2>
+                <p>Разгледайте нашата галерия, за да се насладите на различни моменти, уловени през обектива. Независимо дали става дума за портрети, пейзажи или специални събития, всяка снимка разказва своя уникална история.</p>
+                <div class="gallery">
+                    <img src="../photo1.jpg" alt="Описание на снимка 1" class="gallery-item">
+                    <img src="../photo2.jpg" alt="Описание на снимка 2" class="gallery-item">
+                    <img src="../photo3.jpg" alt="Описание на снимка 3" class="gallery-item">
+                </div>
+            </section>
+        </div>
+        
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div class="caption" id="caption"></div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Ивет Димитрова Photography</p>
+        </footer>
+
+        <script src="../scripts.js"></script>
+    </body>
+
+</html>
