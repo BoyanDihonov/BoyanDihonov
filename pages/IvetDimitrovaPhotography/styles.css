@@ -171,11 +171,20 @@ footer {
     .header p {
         font-size: 1.5em;
     }
+
+    .gallery-item {
+        width: calc(33.33% - 10px);
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 480px) {
     .header p {
         font-size: 1.2em;
+    }
+
+    .gallery-item {
+        width: calc(100% - 10px);
     }
 }
 
@@ -195,9 +204,9 @@ footer {
 
 .button-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
     margin-top: 20px;
 }
 
