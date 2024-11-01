@@ -37,4 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImage.src = images[currentIndex].src;
         captionText.innerHTML = images[currentIndex].alt;
     };
+    
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
 });
