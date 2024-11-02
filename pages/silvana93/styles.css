@@ -89,6 +89,7 @@ main {
     width: 100%;
     max-width: 300px;
     height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -178,7 +179,12 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 footer nav a {
     color: white;
@@ -234,12 +240,11 @@ footer nav a:hover {
 
     .coffee img, .beer img {
         margin-right: 20px;
-        margin-left: 0;
     }
 
     .beer img {
-        margin-right: 0;
         margin-left: 20px;
+        margin-right: 0;
     }
 
     .coffee-text, .beer-text {
