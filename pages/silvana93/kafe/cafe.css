@@ -212,7 +212,14 @@ footer {
     }
 
     nav ul li {
+        width: 100%;
+        text-align: center;
         margin: 5px 0;
+    }
+    
+    nav ul li a {
+        width: 100%;
+        padding: 10px;
     }
 
     .footer-buttons {
