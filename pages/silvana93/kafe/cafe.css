@@ -117,15 +117,13 @@ footer {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-content: center;
 }
 
-
 .gallery-image {
     width: 100%;
-    max-width: 200px;
     cursor: pointer;
     border-radius: 5px;
     transition: transform 0.2s;
@@ -208,24 +206,28 @@ footer {
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     nav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 5px 0;
+        margin: 5px;
+        width: auto;
     }
     
     nav ul li a {
-        width: 100%;
-        padding: 10px;
+        width: auto;
+        padding: 10px 20px;
     }
 
     .footer-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .gallery-image {
