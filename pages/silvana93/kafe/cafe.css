@@ -50,6 +50,15 @@ nav ul li a.active {
     background-color: #008cba;
 }
 
+nav ul li a.special-button {
+    background-color: #a52a2a;
+    font-weight: bold;
+}
+
+nav ul li a.special-button:hover {
+    background-color: #800000;
+}
+
 .content {
     margin: 20px auto;
     padding: 20px;
