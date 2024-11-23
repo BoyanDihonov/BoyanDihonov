@@ -215,19 +215,21 @@ footer {
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
     }
 
     nav ul li {
-        margin: 5px;
-        width: auto;
+        margin: 5px 0;
+        width: 100%;
     }
     
     nav ul li a {
-        width: auto;
-        padding: 10px 20px;
+        width: 90%;
+        text-align: center;
+        padding: 12px;
     }
 
     .footer-buttons {
