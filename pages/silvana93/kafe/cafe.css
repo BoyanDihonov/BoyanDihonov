@@ -170,7 +170,8 @@ footer {
     cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -225,7 +226,7 @@ footer {
         margin: 5px 0;
         width: 100%;
     }
-    
+
     nav ul li a {
         width: 90%;
         text-align: center;
@@ -245,7 +246,8 @@ footer {
         max-width: 100%;
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         font-size: 30px;
     }
 
