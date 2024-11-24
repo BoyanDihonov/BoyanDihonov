@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="../cafe.css">
     <style>
         body {
-            background-color: #fdf6e3;
+            background-color: #f9f4ef;
             background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         header {
-            background-color: #b22222;
+            background-color: #8b0000;
             color: #fff;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
-            border-bottom: 5px solid #fff;
+            border-bottom: 5px solid #ff4500;
         }
 
         header h1 {
@@ -28,7 +32,7 @@
 
         header p.motto {
             font-style: italic;
-            color: #ffefdb;
+            color: #ffe4c4;
         }
 
         nav ul {
@@ -36,11 +40,9 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            background-color: #b22222;
+            background-color: #8b0000;
             padding: 10px 0;
-            border-bottom: 3px solid #8b0000;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 0;
         }
 
         nav ul li {
@@ -51,8 +53,6 @@
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
-            background-color: #8b0000;
-            border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s, transform 0.3s;
         }
@@ -62,62 +62,65 @@
             transform: scale(1.1);
         }
 
-        nav ul li a.active {
-            background-color: #ffd700;
-            color: #b22222;
-            box-shadow: 0 0 10px #ffd700;
-        }
-
         .content {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
             background-color: #fffdfa;
+            border-radius: 10px;
             border: 2px solid #b22222;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .menu-section {
-            border: 1px dashed #b22222;
-            padding: 20px;
-            background-color: #fffef7;
-            border-radius: 10px;
+            text-align: center;
+        }
+
+        .menu-section h2 {
+            color: #8b0000;
+            font-size: 1.8rem;
+            font-family: 'Georgia', serif;
             margin-bottom: 20px;
         }
 
-        .menu-section h3 {
-            color: #8b0000;
-            font-size: 1.5rem;
-            font-family: 'Georgia', serif;
-            margin-bottom: 10px;
-        }
-
-        .menu-section p {
-            color: #333;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
         .menu-section ul {
-            margin: 10px 0;
             list-style: none;
             padding: 0;
         }
 
         .menu-section ul li {
-            background: url('https://cdn-icons-png.flaticon.com/512/2909/2909785.png') no-repeat left center;
-            background-size: 20px 20px;
-            padding-left: 30px;
-            margin-bottom: 10px;
+            padding: 10px;
             font-size: 1rem;
+            background-color: #fffef7;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-section ul li span {
+            color: #8b0000;
+            font-weight: bold;
         }
 
         footer {
-            background-color: #b22222;
+            background-color: #8b0000;
             color: #fff;
             text-align: center;
             padding: 20px;
+            margin-top: 20px;
         }
 
         footer .footer-buttons .footer-button {
-            background-color: #8b0000;
+            background-color: #b22222;
             color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin: 5px;
         }
 
         footer .footer-buttons .footer-button:hover {
@@ -137,6 +140,15 @@
             nav ul li a {
                 font-size: 1rem;
                 padding: 8px 15px;
+            }
+
+            .menu-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .menu-section ul li {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -159,30 +171,20 @@
 
     <main>
         <section class="content">
-            <h2 style="text-align: center; color: #b22222; font-family: 'Georgia', serif;">Нашите празнични предложения</h2>
             <article class="menu-section">
-                <h3>Меню 1</h3>
+                <h2>Нашето празнично меню</h2>
+                <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
                 <ul>
-                    <li>Овчарска салата (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400 гр</li>
-                    <li>Ракия 50 мл (домашна)</li>
-                    <li>Свинска пържола с картофи соте, зеленчуци задушени</li>
-                    <li>Бисквитена торта</li>
+                    <li><span>Салата:</span> Овчарска (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400 гр <em>или</em> Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</li>
+                    <li><span>Основно:</span> Свинска пържола <em>или</em> Пилешка пържола</li>
+                    <li><span>Гарнитура:</span> Пържени картофи <em>или</em> Картофи соте <em>или</em> Задушени зеленчуци</li>
+                    <li><span>Алкохол:</span> Ракия (100 мл) <em>или</em> Вино (250 мл)</li>
+                    <li><span>Безалкохолно:</span> Минерална вода <em>или</em> Газирана безалкохолна напитка</li>
+                    <li><span>Питка:</span> Питка със сирене</li>
+                    <li><span>Допълнение:</span> Сухо мезе - 50 гр + Ядки - 50 гр</li>
+                    <li><span>Десерт:</span> Домашна бисквитена торта</li>
                 </ul>
             </article>
-            <article class="menu-section">
-                <h3>Меню 2</h3>
-                <ul>
-                    <li>Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</li>
-                    <li>Пилешка пържола, пържени картофи и задушени зеленчуци</li>
-                    <li>Ракия 50 мл (домашна)</li>
-                    <li>Минерална вода</li>
-                    <li>Питка със сирене</li>
-                    <li>Сухо мезе - 50 гр</li>
-                    <li>Торта бисквитена</li>
-                    <li>Вино 500 мл</li>
-                </ul>
-            </article>
-            <p style="text-align: center; font-family: 'Georgia', serif; color: #8b0000;">Музика, томбола и добро настроение от нас!</p>
         </section>
     </main>
 
