@@ -1,200 +1,210 @@
 <!DOCTYPE html>
 <html lang="bg">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Коледен банкет - Кафе-Аперитив Силвана</title>
-    <link rel="stylesheet" href="../cafe.css">
-    <style>
-        body {
-            background-color: #f9f4ef;
-            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Коледен банкет - Кафе-Аперитив Силвана</title>
+        <link rel="stylesheet" href="../cafe.css">
+        <style>
+           body {
+    background-color: #f9f4ef;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-            background-color: #8b0000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid #ff4500;
-        }
+header {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff4500;
+}
 
-        header h1 {
-            font-family: 'Georgia', serif;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        header p.motto {
-            font-style: italic;
-            color: #ffe4c4;
-        }
+header p.motto {
+    font-style: italic;
+    color: #ffe4c4;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background-color: #8b0000;
-            padding: 10px 0;
-            margin: 0;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #8b0000;
+    padding: 10px 0;
+    margin: 0;
+}
 
-        nav ul li {
-            margin: 0 15px;
-        }
+nav ul li {
+    margin: 0 15px;
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+nav ul li a {
+    background-color: #b22222;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
 
-        nav ul li a:hover {
-            background-color: #ff4500;
-            transform: scale(1.1);
-        }
+nav ul li a:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
 
-        .content {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background-color: #fffdfa;
-            border-radius: 10px;
-            border: 2px solid #b22222;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fffdfa;
+    border-radius: 10px;
+    border: 2px solid #b22222;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .menu-section {
-            text-align: center;
-        }
+.menu-section {
+    text-align: center;
+}
 
-        .menu-section h2 {
-            color: #8b0000;
-            font-size: 1.8rem;
-            font-family: 'Georgia', serif;
-            margin-bottom: 20px;
-        }
+.menu-section h2 {
+    color: #8b0000;
+    font-size: 1.8rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+}
 
-        .menu-section ul {
-            list-style: none;
-            padding: 0;
-        }
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
 
-        .menu-section ul li {
-            padding: 10px;
-            font-size: 1rem;
-            background-color: #fffef7;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+.menu-section ul li {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #fffef7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .menu-section ul li span {
-            color: #8b0000;
-            font-weight: bold;
-        }
+.menu-section ul li span {
+    color: #8b0000;
+    font-weight: bold;
+}
 
-        footer {
-            background-color: #8b0000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
+footer {
+    background-color: #8b0000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
 
-        footer .footer-buttons .footer-button {
-            background-color: #b22222;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin: 5px;
-        }
+footer .footer-buttons .footer-button {
+    background-color: #b22222;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+}
 
-        footer .footer-buttons .footer-button:hover {
-            background-color: #ff4500;
-        }
+footer .footer-buttons .footer-button:hover {
+    background-color: #ff4500;
+}
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
 
-            nav ul li {
-                margin: 10px 0;
-            }
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+    }
 
-            nav ul li a {
-                font-size: 1rem;
-                padding: 8px 15px;
-            }
+    nav ul li a {
+        display: block;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 
-            .menu-section h2 {
-                font-size: 1.5rem;
-            }
+    .menu-section h2 {
+        font-size: 1.5rem;
+    }
 
-            .menu-section ul li {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
-</head>
+    .menu-section ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
-<body>
-    <header>
-        <h1>Коледен банкет в Кафе-Аперитив "Силвана"</h1>
-        <p class="motto">Направете вашата Коледа специална с нашите празнични предложения!</p>
-        <nav>
-            <ul>
-                <li><a href="../../cafe.html">Начало</a></li>
-                <li><a href="./about.html">За нас</a></li>
-                <li><a href="./menu.html">Меню</a></li>
-                <li><a href="./gallery.html">Галерия</a></li>
-                <li><a href="./contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
+        </style>
+    </head>
 
-    <main>
-        <section class="content">
-            <article class="menu-section">
-                <h2>Нашето празнично меню</h2>
-                <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
+    <body>
+        <header>
+            <h1>Коледен банкет в Кафе-Аперитив "Силвана"</h1>
+            <p class="motto">Направете вашата Коледа специална с нашите празнични предложения!</p>
+            <nav>
                 <ul>
-                    <li><span>Салата:</span> Овчарска (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400 гр <em>или</em> Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</li>
-                    <li><span>Основно:</span> Свинска пържола <em>или</em> Пилешка пържола</li>
-                    <li><span>Гарнитура:</span> Пържени картофи <em>или</em> Картофи соте <em>или</em> Задушени зеленчуци</li>
-                    <li><span>Алкохол:</span> Ракия (100 мл) <em>или</em> Вино (250 мл)</li>
-                    <li><span>Безалкохолно:</span> Минерална вода <em>или</em> Газирана безалкохолна напитка</li>
-                    <li><span>Питка:</span> Питка със сирене</li>
-                    <li><span>Допълнение:</span> Сухо мезе - 50 гр + Ядки - 50 гр</li>
-                    <li><span>Десерт:</span> Домашна бисквитена торта</li>
+                    <li><a href="../../cafe.html">Начало</a></li>
+                    <li><a href="./about.html">За нас</a></li>
+                    <li><a href="./menu.html">Меню</a></li>
+                    <li><a href="./gallery.html">Галерия</a></li>
+                    <li><a href="./contact.html">Контакти</a></li>
                 </ul>
-            </article>
-        </section>
-    </main>
+            </nav>
+        </header>
 
-    <footer>
-        <p class="footer-text">© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
-        <div class="footer-buttons">
-            <a href="tel:+359885621218" class="footer-button">Резервирай сега</a>
-            <a href="../../cafe.html" class="footer-button">Към началната страница</a>
-        </div>
-    </footer>
-</body>
+        <main>
+            <section class="content">
+                <article class="menu-section">
+                    <h2>Нашето празнично меню</h2>
+                    <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
+                    <ul>
+                        <li><span>Салата:</span> Овчарска (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400
+                            гр <em>или</em> Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</li>
+                        <li><span>Основно:</span> Свинска пържола <em>или</em> Пилешка пържола</li>
+                        <li><span>Гарнитура:</span> Пържени картофи <em>или</em> Картофи соте <em>или</em> Задушени
+                            зеленчуци</li>
+                        <li><span>Алкохол:</span> Ракия (100 мл) <em>или</em> Вино (250 мл)</li>
+                        <li><span>Безалкохолно:</span> Минерална вода <em>или</em> Газирана безалкохолна напитка</li>
+                        <li><span>Питка:</span> Питка със сирене</li>
+                        <li><span>Допълнение:</span> Сухо мезе - 50 гр + Ядки - 50 гр</li>
+                        <li><span>Десерт:</span> Домашна бисквитена торта</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p class="footer-text">© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
+            <div class="footer-buttons">
+                <a href="tel:+359885621218" class="footer-button">Резервирай сега</a>
+                <a href="../../cafe.html" class="footer-button">Към началната страница</a>
+            </div>
+        </footer>
+    </body>
 
 </html>
