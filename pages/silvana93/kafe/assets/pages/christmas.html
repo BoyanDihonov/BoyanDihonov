@@ -58,6 +58,7 @@
             font-weight: bold;
             font-size: 1rem;
             transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
         }
 
         nav ul li a:hover {
@@ -86,50 +87,6 @@
             margin-bottom: 20px;
         }
 
-        .menu-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu-section ul li {
-            padding: 10px;
-            font-size: 1rem;
-            background-color: #fffef7;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .menu-section ul li span {
-            color: #8b0000;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #8b0000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        footer .footer-buttons .footer-button {
-            background-color: #b22222;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin: 5px;
-        }
-
-        footer .footer-buttons .footer-button:hover {
-            background-color: #ff4500;
-        }
-
         .radio-container {
             display: flex;
             align-items: center;
@@ -154,7 +111,7 @@
             text-align: left;
         }
 
-        .radio-container input[type="radio"]:checked + .radio-label {
+        .radio-container input[type="radio"]:checked+.radio-label {
             background-color: #ff4500;
             color: #fff;
             border-color: #8b0000;
@@ -164,6 +121,28 @@
         .radio-container .radio-label:hover {
             border-color: #ff4500;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #8b0000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer .footer-buttons .footer-button {
+            background-color: #b22222;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin: 5px;
+        }
+
+        footer .footer-buttons .footer-button:hover {
+            background-color: #ff4500;
         }
 
         @media (max-width: 768px) {
@@ -210,23 +189,26 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="content">
             <article class="menu-section">
                 <h2>Нашето празнично меню</h2>
                 <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
-                <form action="#" method="post">
+                <form action="/save-menu" method="post">
+                    <p>
+                        <label for="name" style="font-weight: bold;">Име:</label>
+                        <input type="text" id="name" name="name" required style="padding: 10px; width: 100%; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                    </p>
                     <ul>
                         <li>
                             <span>Салата:</span>
                             <label class="radio-container">
                                 <input type="radio" name="salad" value="ovcharska" required>
-                                <span class="radio-label">Овчарска (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400 гр</span>
+                                <span class="radio-label">Овчарска</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="salad" value="silvana">
-                                <span class="radio-label">Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</span>
+                                <span class="radio-label">Салата Силвана</span>
                             </label>
                         </li>
                         <li>
@@ -259,11 +241,11 @@
                             <span>Алкохол:</span>
                             <label class="radio-container">
                                 <input type="radio" name="alcohol" value="rakia" required>
-                                <span class="radio-label">Ракия (100 мл)</span>
+                                <span class="radio-label">Ракия</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="alcohol" value="vino">
-                                <span class="radio-label">Вино (250 мл)</span>
+                                <span class="radio-label">Вино</span>
                             </label>
                         </li>
                         <li>
@@ -274,7 +256,7 @@
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="non_alcohol" value="gazirana">
-                                <span class="radio-label">Газирана безалкохолна напитка</span>
+                                <span class="radio-label">Газирана напитка</span>
                             </label>
                         </li>
                     </ul>
@@ -285,9 +267,8 @@
             </article>
         </section>
     </main>
-
     <footer>
-        <p>© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
+        <p class="footer-text">© 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
         <div class="footer-buttons">
             <a href="tel:+359885621218" class="footer-button">Резервирай сега</a>
             <a href="../../cafe.html" class="footer-button">Към началната страница</a>
