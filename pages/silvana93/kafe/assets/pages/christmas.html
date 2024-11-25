@@ -157,6 +157,42 @@ footer .footer-buttons .footer-button:hover {
         flex-direction: column;
         align-items: flex-start;
     }
+    .radio-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+}
+
+.radio-container input[type="radio"] {
+    display: none; /* Скриваме стандартния радио бутон */
+}
+
+.radio-container .radio-label {
+    display: inline-block;
+    background-color: #fffef7;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.radio-container input[type="radio"]:checked + .radio-label {
+    background-color: #ff4500;
+    color: #fff;
+    border-color: #8b0000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.radio-container .radio-label:hover {
+    border-color: #ff4500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 }
 
         </style>
@@ -182,19 +218,75 @@ footer .footer-buttons .footer-button:hover {
                 <article class="menu-section">
                     <h2>Нашето празнично меню</h2>
                     <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
-                    <ul>
-                        <li><span>Салата:</span> Овчарска (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400
-                            гр <em>или</em> Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</li>
-                        <li><span>Основно:</span> Свинска пържола <em>или</em> Пилешка пържола</li>
-                        <li><span>Гарнитура:</span> Пържени картофи <em>или</em> Картофи соте <em>или</em> Задушени
-                            зеленчуци</li>
-                        <li><span>Алкохол:</span> Ракия (100 мл) <em>или</em> Вино (250 мл)</li>
-                        <li><span>Безалкохолно:</span> Минерална вода <em>или</em> Газирана безалкохолна напитка</li>
-                        <li><span>Питка:</span> Питка със сирене</li>
-                        <li><span>Допълнение:</span> Сухо мезе - 50 гр + Ядки - 50 гр</li>
-                        <li><span>Десерт:</span> Домашна бисквитена торта</li>
-                    </ul>
+                    <form action="#" method="post">
+                        <ul>
+                            <li>
+                                <span>Салата:</span>
+                                <label class="radio-container">
+                                    <input type="radio" name="salad" value="ovcharska" required>
+                                    <span class="radio-label">Овчарска (домати, краставици, червен лук, яйце, гъби, кашкавал) - 400 гр</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="salad" value="silvana">
+                                    <span class="radio-label">Салата Силвана (Снежанка, катък, руска и домашна туршия) - 400 гр</span>
+                                </label>
+                            </li>
+                            <li>
+                                <span>Основно:</span>
+                                <label class="radio-container">
+                                    <input type="radio" name="main_course" value="svinska" required>
+                                    <span class="radio-label">Свинска пържола</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="main_course" value="pileshka">
+                                    <span class="radio-label">Пилешка пържола</span>
+                                </label>
+                            </li>
+                            <li>
+                                <span>Гарнитура:</span>
+                                <label class="radio-container">
+                                    <input type="radio" name="side_dish" value="kartofi_przeni" required>
+                                    <span class="radio-label">Пържени картофи</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="side_dish" value="kartofi_sote">
+                                    <span class="radio-label">Картофи соте</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="side_dish" value="zelenchuci">
+                                    <span class="radio-label">Задушени зеленчуци</span>
+                                </label>
+                            </li>
+                            <li>
+                                <span>Алкохол:</span>
+                                <label class="radio-container">
+                                    <input type="radio" name="alcohol" value="rakia" required>
+                                    <span class="radio-label">Ракия (100 мл)</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="alcohol" value="vino">
+                                    <span class="radio-label">Вино (250 мл)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <span>Безалкохолно:</span>
+                                <label class="radio-container">
+                                    <input type="radio" name="non_alcohol" value="mineralna" required>
+                                    <span class="radio-label">Минерална вода</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="non_alcohol" value="gazirana">
+                                    <span class="radio-label">Газирана безалкохолна напитка</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <p>
+                            <button type="submit" style="background-color: #8b0000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Изпрати избор</button>
+                        </p>
+                    </form>
                 </article>
+                
+                
             </section>
         </main>
 
