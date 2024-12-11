@@ -40,13 +40,6 @@
             margin-top: 5px;         
         }          
 
-        header .countdown {             
-            margin-top: 10px;             
-            font-size: 1.5rem;             
-            color: #ffd700;             
-            font-weight: bold;         
-        }          
-
         nav ul {             
             list-style: none;             
             display: flex;             
@@ -196,8 +189,7 @@
     <header>         
         <h1>Коледен банкет в Кафе-Аперитив "Силвана"</h1>         
         <p class="motto">Направете вашата Коледа специална с нашите празнични предложения!</p>         
-        <p class="event-date">Дата на банкета: 14.12.2024</p>         
-        <p class="countdown" id="countdown">Остава време: -- дни, -- часа, -- минути, -- секунди</p>         
+        <p class="event-date">Поради големия интерес ще имаме две дати - 13.12.2024 и 14.12.2024</p>         
         <nav>             
             <ul>                 
                 <li><a href="../../cafe.html">Начало</a></li>                 
@@ -212,7 +204,7 @@
         <section class="content">             
             <article class="menu-section">                 
                 <h2>Нашето празнично меню</h2>                 
-                <p class="important-note">Коледният банкет ще се проведе на 14.12.2024. Моля, заплатете куверта до 07.12.2024 на бара!</p>                 
+                <p class="important-note">Коледният банкет ще се проведе на 13.12.2024 и 14.12.2024. Моля, заплатете куверта до 07.12.2024 на бара!</p>                 
                 <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>                 
                 <form action="/save-menu" method="post">                     
                     <label for="name" style="font-weight: bold;">Име:</label>                     
@@ -289,24 +281,6 @@
             <a href="../../cafe.html" class="footer-button">Обратно към началната страница</a>             
             <a href="./contact.html" class="footer-button">Свържете се с нас</a>         
         </div>     
-    </footer>      
-    <script>         
-        const countdownElement = document.getElementById('countdown');         
-        const eventDate = new Date('2024-12-14T00:00:00').getTime();          
-        function updateCountdown() {             
-            const now = new Date().getTime();             
-            const timeLeft = eventDate - now;              
-            if (timeLeft <= 0) {                 
-                countdownElement.textContent = 'Банкета вече започна!';                 
-                return;             
-            }              
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));             
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));             
-            const minutes = Math.floor((timeLeft % (1000 * 60)) / (1000 * 60));             
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);              
-            countdownElement.textContent = `Остава време: ${days} дни, ${hours} часа, ${minutes} минути, ${seconds} секунди`;         
-        }          
-        setInterval(updateCountdown, 1000);     
-    </script> 
+    </footer> 
 </body>  
 </html>
