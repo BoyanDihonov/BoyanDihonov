@@ -1,286 +1,287 @@
-<!DOCTYPE html> 
-<html lang="bg">  
-<head>     
-    <meta charset="UTF-8">     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
-    <title>Коледен банкет - Кафе-Аперитив Силвана</title>     
-    <link rel="stylesheet" href="../cafe.css">     
-    <style>         
-        body {             
-            background-color: #f9f4ef;             
-            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');             
-            font-family: 'Arial', sans-serif;             
-            color: #333;             
-            margin: 0;             
-            padding: 0;         
-        }          
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коледен банкет - Кафе-Аперитив Силвана</title>
+    <link rel="stylesheet" href="../cafe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f9f4ef;
+            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-        header {             
-            background-color: #8b0000;             
-            color: #fff;             
-            padding: 20px;             
-            text-align: center;             
-            border-bottom: 5px solid #ff4500;         
-        }          
+        header {
+            background-color: #8b0000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff4500;
+        }
 
-        header h1 {             
-            font-family: 'Georgia', serif;             
-            font-size: 2.5rem;             
-            margin-bottom: 10px;         
-        }          
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-        header p.motto {             
-            font-style: italic;             
-            color: #ffe4c4;         
-        }          
+        header p.motto {
+            font-style: italic;
+            color: #ffe4c4;
+        }
 
-        header .event-date {             
-            font-size: 1.2rem;             
-            font-weight: bold;             
-            margin-top: 5px;         
-        }          
+        header .event-date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 5px;
+        }
 
-        nav ul {             
-            list-style: none;             
-            display: flex;             
-            justify-content: center;             
-            flex-wrap: wrap;             
-            background-color: #8b0000;             
-            padding: 10px 0;             
-            margin: 0;         
-        }          
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #8b0000;
+            padding: 10px 0;
+            margin: 0;
+        }
 
-        nav ul li {             
-            margin: 0 15px;         
-        }          
+        nav ul li {
+            margin: 0 15px;
+        }
 
-        nav ul li a {             
-            background-color: #b22222;             
-            color: #fff;             
-            text-decoration: none;             
-            padding: 10px 20px;             
-            border-radius: 5px;             
-            font-weight: bold;             
-            font-size: 1rem;             
-            transition: background-color 0.3s, transform 0.3s;             
-            display: inline-block;         
-        }          
+        nav ul li a {
+            background-color: #b22222;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
 
-        nav ul li a:hover {             
-            background-color: #ff4500;             
-            transform: scale(1.1);         
-        }          
+        nav ul li a:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+        }
 
-        .content {             
-            padding: 20px;             
-            margin: 20px auto;             
-            max-width: 800px;             
-            background-color: #fffdfa;             
-            border-radius: 10px;             
-            border: 2px solid #b22222;             
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);         
-        }          
+        .content {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fffdfa;
+            border-radius: 10px;
+            border: 2px solid #b22222;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-        .menu-section {             
-            text-align: center;         
-        }          
+        .menu-section {
+            text-align: center;
+        }
 
-        .menu-section h2 {             
-            color: #8b0000;             
-            font-size: 1.8rem;             
-            font-family: 'Georgia', serif;             
-            margin-bottom: 20px;         
-        }          
+        .menu-section h2 {
+            color: #8b0000;
+            font-size: 1.8rem;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
 
-        .important-note {             
-            font-size: 1.1rem;             
-            background-color: #ffedd5;             
-            color: #8b0000;             
-            padding: 10px;             
-            border-left: 5px solid #ff4500;             
-            margin: 20px 0;             
-            text-align: center;         
-        }          
+        .important-note {
+            font-size: 1.1rem;
+            background-color: #ffedd5;
+            color: #8b0000;
+            padding: 10px;
+            border-left: 5px solid #ff4500;
+            margin: 20px 0;
+            text-align: center;
+        }
 
-        footer {             
-            background-color: #8b0000;             
-            color: #fff;             
-            text-align: center;             
-            padding: 20px;             
-            margin-top: 20px;         
-        }          
+        footer {
+            background-color: #8b0000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
 
-        footer .footer-buttons .footer-button {             
-            background-color: #b22222;             
-            color: #fff;             
-            text-decoration: none;             
-            padding: 10px 20px;             
-            border-radius: 5px;             
-            font-size: 1rem;             
-            margin: 5px;         
-        }          
+        footer .footer-buttons .footer-button {
+            background-color: #b22222;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin: 5px;
+        }
 
-        footer .footer-buttons .footer-button:hover {             
-            background-color: #ff4500;         
-        }          
+        footer .footer-buttons .footer-button:hover {
+            background-color: #ff4500;
+        }
 
-        @media (max-width: 768px) {             
-            nav ul {                 
-                flex-direction: column;                 
-                align-items: stretch;                 
-                text-align: center;             
-            }              
-            nav ul li {                 
-                margin: 5px 0;                 
-                width: 100%;             
-            }              
-            nav ul li a {                 
-                display: block;                 
-                font-size: 1rem;                 
-                padding: 10px 20px;             
-            }              
-            .menu-section h2 {                 
-                font-size: 1.5rem;             
-            }         
-        }         
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+                width: 100%;
+            }
+            nav ul li a {
+                display: block;
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .menu-section h2 {
+                font-size: 1.5rem;
+            }
+        }
 
-        .radio-container {             
-            display: inline-block;             
-            position: relative;             
-            padding-left: 35px;             
-            margin: 10px 20px;             
-            cursor: pointer;             
-            font-size: 1rem;             
-            user-select: none;         
-        }          
+        .radio-container {
+            display: inline-block;
+            position: relative;
+            padding-left: 35px;
+            margin: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            user-select: none;
+        }
 
-        .radio-container input {             
-            position: absolute;             
-            opacity: 0;             
-            cursor: pointer;         
-        }          
+        .radio-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
 
-        .radio-container .radio-label {             
-            position: relative;             
-            display: inline-block;             
-            color: #8b0000;             
-            font-weight: bold;             
-            padding: 5px 10px;             
-            border: 2px solid #b22222;             
-            border-radius: 25px;             
-            background-color: #fff;             
-            transition: background-color 0.3s, border-color 0.3s;         
-        }          
+        .radio-container .radio-label {
+            position: relative;
+            display: inline-block;
+            color: #8b0000;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #b22222;
+            border-radius: 25px;
+            background-color: #fff;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
 
-        .radio-container input:checked + .radio-label {             
-            background-color: #ff4500;             
-            border-color: #ff4500;             
-            color: #fff;         
-        }          
+        .radio-container input:checked + .radio-label {
+            background-color: #ff4500;
+            border-color: #ff4500;
+            color: #fff;
+        }
 
-        .radio-container .radio-label:hover {             
-            background-color: #ffd700;             
-            border-color: #ffd700;             
-            color: #8b0000;         
-        }     
-    </style> 
-</head>  
-<body>     
-    <header>         
-        <h1>Коледен банкет в Кафе-Аперитив "Силвана"</h1>         
-        <p class="motto">Направете вашата Коледа специална с нашите празнични предложения!</p>         
-        <p class="event-date">Поради големия интерес ще имаме две дати - 13.12.2024 и 14.12.2024</p>         
-        <nav>             
-            <ul>                 
-                <li><a href="../../cafe.html">Начало</a></li>                 
-                <li><a href="./about.html">За нас</a></li>                 
-                <li><a href="./menu.html">Меню</a></li>                 
-                <li><a href="./gallery.html">Галерия</a></li>                 
-                <li><a href="./contact.html">Контакти</a></li>             
-            </ul>         
-        </nav>     
-    </header>     
-    <main>         
-        <section class="content">             
-            <article class="menu-section">                 
-                <h2>Нашето празнично меню</h2>                 
-                <p class="important-note">Коледният банкет ще се проведе на 13.12.2024 и 14.12.2024. Моля, заплатете куверта до 07.12.2024 на бара!</p>                 
-                <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>                 
-                <form action="/save-menu" method="post">                     
-                    <label for="name" style="font-weight: bold;">Име:</label>                     
-                    <input type="text" id="name" name="name" required style="padding: 10px; width: 100%; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">                     
-                    <ul>                         
-                        <li>                             
-                            <span>Салата:</span>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="salad" value="ovcharska" required>                                 
-                                <span class="radio-label">Овчарска</span>                             
-                            </label>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="salad" value="silvana">                                 
-                                <span class="radio-label">Салата Силвана</span>                             
-                            </label>                         
-                        </li>                         
-                        <li>                             
-                            <span>Основно:</span>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="main_course" value="svinska" required>                                 
-                                <span class="radio-label">Свинска пържола</span>                             
-                            </label>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="main_course" value="pileshka">                                 
-                                <span class="radio-label">Пилешка пържола</span>                             
-                            </label>                         
-                        </li>                         
-                        <li>                             
-                            <span>Гарнитура:</span>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="side_dish" value="kartofi_przeni" required>                                 
-                                <span class="radio-label">Пържени картофи</span>                             
-                            </label>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="side_dish" value="kartofi_sote">                                 
-                                <span class="radio-label">Картофи соте</span>                             
-                            </label>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="side_dish" value="zelenchuci">                                 
-                                <span class="radio-label">Задушени зеленчуци</span>                             
-                            </label>                         
-                        </li>                         
-                        <li>                             
-                            <span>Алкохол:</span>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="alcohol" value="rakia" required>                                 
-                                <span class="radio-label">Ракия</span>                             
-                            </label>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="alcohol" value="vino">                                 
-                                <span class="radio-label">Вино</span>                             
-                            </label>                         
-                        </li>                         
-                        <li>                             
-                            <span>Безалкохолно:</span>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="non_alcohol" value="mineralna" required>                                 
-                                <span class="radio-label">Минерална вода</span>                             
-                            </label>                             
-                            <label class="radio-container">                                 
-                                <input type="radio" name="non_alcohol" value="gazirana">                                 
-                                <span class="radio-label">Газирана напитка</span>                             
-                            </label>                         
-                        </li>                     
-                    </ul>                     
-                    <button type="submit" style="background-color: #8b0000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">Изпрати</button>                 
-                </form>                              
-            </article>         
-        </section>     
-    </main>     
-    <footer>         
-        <p>&copy; 2024 Кафе-Аперитив "Силвана".</p>         
-        <div class="footer-buttons">             
-            <a href="../../cafe.html" class="footer-button">Обратно към началната страница</a>             
-            <a href="./contact.html" class="footer-button">Свържете се с нас</a>         
-        </div>     
-    </footer> 
-</body>  
+        .radio-container .radio-label:hover {
+            background-color: #ffd700;
+            border-color: #ffd700;
+            color: #8b0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Коледен банкет в Кафе-Аперитив "Силвана"</h1>
+        <p class="motto">Направете вашата Коледа специална с нашите празнични предложения!</p>
+        <p class="event-date">Поради големия интерес ще имаме две дати - 13.12.2024 и 14.12.2024</p>
+        <nav>
+            <ul>
+                <li><a href="../../cafe.html">Начало</a></li>
+                <li><a href="./about.html">За нас</a></li>
+                <li><a href="./menu.html">Меню</a></li>
+                <li><a href="./gallery.html">Галерия</a></li>
+                <li><a href="./contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <article class="menu-section">
+                <h2>Нашето празнично меню</h2>
+                <p class="important-note">Коледният банкет ще се проведе на 13.12.2024 и 14.12.2024. Моля, заплатете куверта до 07.12.2024 на бара!</p>
+                <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
+                <form action="/save-menu" method="post">
+                    <label for="name" style="font-weight: bold;">Име:</label>
+                    <input type="text" id="name" name="name" required style="padding: 10px; width: 100%; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                    <ul>
+                        <li>
+                            <span><i class="fas fa-leaf"></i> Салата:</span>
+                            <label class="radio-container">
+                                <input type="radio" name="salad" value="ovcharska" required>
+                                <span class="radio-label">Овчарска</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="salad" value="silvana">
+                                <span class="radio-label">Салата Силвана</span>
+                            </label>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-drumstick-bite"></i> Основно:</span>
+                            <label class="radio-container">
+                                <input type="radio" name="main_course" value="svinska" required>
+                                <span class="radio-label">Свинска пържола</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="main_course" value="pileshka">
+                                <span class="radio-label">Пилешка пържола</span>
+                            </label>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-potato"></i> Гарнитура:</span>
+                            <label class="radio-container">
+                                <input type="radio" name="side_dish" value="kartofi_przeni" required>
+                                <span class="radio-label">Пържени картофи</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="side_dish" value="kartofi_sote">
+                                <span class="radio-label">Картофи соте</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="side_dish" value="zelenchuci">
+                                <span class="radio-label">Задушени зеленчуци</span>
+                            </label>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-wine-glass-alt"></i> Алкохол:</span>
+                            <label class="radio-container">
+                                <input type="radio" name="alcohol" value="rakia" required>
+                                <span class="radio-label">Ракия</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="alcohol" value="vino">
+                                <span class="radio-label">Вино</span>
+                            </label>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-tint"></i> Безалкохолно:</span>
+                            <label class="radio-container">
+                                <input type="radio" name="non_alcohol" value="mineralna" required>
+                                <span class="radio-label">Минерална вода</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="non_alcohol" value="gazirana">
+                                <span class="radio-label">Газирана напитка</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <button type="submit" style="background-color: #8b0000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">Изпрати</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
+        <div class="footer-buttons">
+            <a href="./privacy.html" class="footer-button">Политика за конфиденциалност</a>
+            <a href="./terms.html" class="footer-button">Условия за ползване</a>
+        </div>
+    </footer>
+</body>
 </html>
