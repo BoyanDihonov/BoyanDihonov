@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Коледен банкет - Кафе-Аперитив Силвана</title>
-    <link rel="stylesheet" href="../cafe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             background-color: #f9f4ef;
             background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-            font-family: 'Arial', sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
@@ -21,34 +20,50 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            border-bottom: 5px solid #ff4500;
+            position: relative;
         }
 
         header h1 {
             font-family: 'Georgia', serif;
             font-size: 2.5rem;
-            margin-bottom: 10px;
         }
 
-        header p.motto {
-            font-style: italic;
-            color: #ffe4c4;
+        header p {
+            font-size: 1.2rem;
         }
 
         header .event-date {
-            font-size: 1.2rem;
+            margin-top: 10px;
             font-weight: bold;
-            margin-top: 5px;
+        }
+
+        #language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        #language-switcher button {
+            background-color: #8b0000;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #language-switcher button:hover {
+            background-color: #ff4500;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             background-color: #8b0000;
-            padding: 10px 0;
             margin: 0;
+            padding: 10px 0;
         }
 
         nav ul li {
@@ -56,51 +71,97 @@
         }
 
         nav ul li a {
-            background-color: #b22222;
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
             padding: 10px 20px;
             border-radius: 5px;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background-color 0.3s, transform 0.3s;
-            display: inline-block;
+            background-color: #b22222;
+            transition: background-color 0.3s;
         }
 
         nav ul li a:hover {
             background-color: #ff4500;
-            transform: scale(1.1);
         }
 
         .content {
             padding: 20px;
-            margin: 20px auto;
             max-width: 800px;
-            background-color: #fffdfa;
+            margin: 20px auto;
+            background: #fffdfa;
             border-radius: 10px;
             border: 2px solid #b22222;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .menu-section {
-            text-align: center;
-        }
-
-        .menu-section h2 {
+        .content h2 {
             color: #8b0000;
-            font-size: 1.8rem;
-            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .important-note {
-            font-size: 1.1rem;
-            background-color: #ffedd5;
-            color: #8b0000;
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input[type="text"] {
             padding: 10px;
-            border-left: 5px solid #ff4500;
-            margin: 20px 0;
-            text-align: center;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+        }
+
+        ul li span {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .radio-container {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .radio-container input {
+            margin-right: 10px;
+        }
+
+        .radio-label {
+            font-size: 1rem;
+        }
+
+        button {
+            display: block;
+            background-color: #8b0000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #ff4500;
         }
 
         footer {
@@ -111,253 +172,218 @@
             margin-top: 20px;
         }
 
-        footer .footer-buttons .footer-button {
-            background-color: #b22222;
+        footer a {
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin: 5px;
+            margin: 0 10px;
+            font-weight: bold;
         }
 
-        footer .footer-buttons .footer-button:hover {
-            background-color: #ff4500;
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
+            header h1 {
+                font-size: 2rem;
+            }
 
-    header h1 {
-        font-size: 1.8rem;
-    }
+            nav ul {
+                flex-wrap: wrap;
+            }
 
-    header p.motto {
-        font-size: 0.9rem;
-    }
+            nav ul li {
+                margin: 10px;
+            }
 
-    header .event-date {
-        font-size: 1rem;
-    }
+            .content {
+                padding: 15px;
+            }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
+            ul li span {
+                font-size: 1rem;
+            }
 
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-
-    .content {
-        padding: 15px;
-        margin: 10px;
-        border-width: 1px;
-    }
-
-    .menu-section h2 {
-        font-size: 1.5rem;
-    }
-
-    form label {
-        display: block;
-        font-size: 1rem;
-    }
-
-    form input[type="text"] {
-        font-size: 0.9rem;
-    }
-
-    .radio-container {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .radio-container .radio-label {
-        font-size: 0.9rem;
-        padding: 5px 15px;
-    }
-
-    ul {
-        padding: 0;
-        list-style: none;
-    }
-
-    ul li {
-        margin-bottom: 10px;
-    }
-
-    ul li span {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 1rem;
-    }
-
-    button[type="submit"] {
-        font-size: 1rem;
-        width: 100%;
-        padding: 12px;
-    }
-
-    footer {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-
-    footer .footer-buttons .footer-button {
-        display: block;
-        margin: 10px auto;
-        font-size: 0.9rem;
-        text-align: center;
-    }
-}
-
-
-        .radio-container {
-            display: inline-block;
-            position: relative;
-            padding-left: 35px;
-            margin: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            user-select: none;
-        }
-
-        .radio-container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-        }
-
-        .radio-container .radio-label {
-            position: relative;
-            display: inline-block;
-            color: #8b0000;
-            font-weight: bold;
-            padding: 5px 10px;
-            border: 2px solid #b22222;
-            border-radius: 25px;
-            background-color: #fff;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-
-        .radio-container input:checked + .radio-label {
-            background-color: #ff4500;
-            border-color: #ff4500;
-            color: #fff;
-        }
-
-        .radio-container .radio-label:hover {
-            background-color: #ffd700;
-            border-color: #ffd700;
-            color: #8b0000;
+            button {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Коледен банкет в Кафе-Аперитив "Силвана"</h1>
-        <p class="motto">Направете вашата Коледа специална с нашите празнични предложения!</p>
-        <p class="event-date">Поради големия интерес ще имаме две дати - 27.12.2024 и 28.12.2024</p>
-        <nav>
-            <ul>
-                <li><a href="../../cafe.html">Начало</a></li>
-                <li><a href="./about.html">За нас</a></li>
-                <li><a href="./menu.html">Меню</a></li>
-                <li><a href="./gallery.html">Галерия</a></li>
-                <li><a href="./contact.html">Контакти</a></li>
-            </ul>
-        </nav>
+        <div id="language-switcher">
+            <button id="btn-bg">BG</button>
+            <button id="btn-en">EN</button>
+        </div>
+        <h1 id="page-title">Коледен банкет в Кафе-Аперитив "Силвана"</h1>
+        <p id="event-date" class="event-date">27.12.2024 и 28.12.2024</p>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">Начало</a></li>
+            <li><a href="#">За нас</a></li>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">Галерия</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="content">
             <article class="menu-section">
-                <h2>Нашето празнично меню</h2>
-                <p class="important-note">Коледният банкет ще се проведе на 27.12.2024. Моля, заплатете куверта до 22.12.2024 на бара!</p>
-                <p style="font-size: 1.2rem; color: #8b0000; font-weight: bold;">Цена: 25 лв. на човек</p>
+                <h2 id="menu-title">Нашето празнично меню</h2>
+                <p id="price-note">Цена: 25 лв. на човек</p>
                 <form action="/save-menu" method="post">
-                    <label for="name" style="font-weight: bold;">Име:</label>
-                    <input type="text" id="name" name="name" required style="padding: 10px; width: 100%; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                    <label for="name" id="name-label">Име:</label>
+                    <input type="text" id="name" name="name" required>
                     <ul>
                         <li>
-                            <span><i class="fas fa-leaf"></i> Салата:</span>
+                            <span id="salad-label">Салата:</span>
                             <label class="radio-container">
                                 <input type="radio" name="salad" value="ovcharska" required>
-                                <span class="radio-label">Овчарска</span>
+                                <span class="radio-label" id="salad-ovcharska">Овчарска</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="salad" value="silvana">
-                                <span class="radio-label">Салата Силвана</span>
+                                <span class="radio-label" id="salad-silvana">Салата Силвана</span>
                             </label>
                         </li>
                         <li>
-                            <span><i class="fas fa-drumstick-bite"></i> Основно:</span>
+                            <span id="main-label">Основно:</span>
                             <label class="radio-container">
                                 <input type="radio" name="main_course" value="svinska" required>
-                                <span class="radio-label">Свинска пържола</span>
+                                <span class="radio-label" id="main-svinska">Свинска пържола</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="main_course" value="pileshka">
-                                <span class="radio-label">Пилешка пържола</span>
+                                <span class="radio-label" id="main-pileshka">Пилешка пържола</span>
                             </label>
                         </li>
                         <li>
-                            <span><i class="fas fa-potato"></i> Гарнитура:</span>
+                            <span id="side-label">Гарнитура:</span>
                             <label class="radio-container">
                                 <input type="radio" name="side_dish" value="kartofi_przeni" required>
-                                <span class="radio-label">Пържени картофи</span>
+                                <span class="radio-label" id="side-przeni">Пържени картофи</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="side_dish" value="kartofi_sote">
-                                <span class="radio-label">Картофи соте</span>
+                                <span class="radio-label" id="side-sote">Картофи соте</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="side_dish" value="zelenchuci">
-                                <span class="radio-label">Задушени зеленчуци</span>
+                                <span class="radio-label" id="side-zelenchuci">Задушени зеленчуци</span>
                             </label>
                         </li>
                         <li>
-                            <span><i class="fas fa-wine-glass-alt"></i> Алкохол:</span>
+                            <span id="alcohol-label">Алкохол:</span>
                             <label class="radio-container">
                                 <input type="radio" name="alcohol" value="rakia" required>
-                                <span class="radio-label">Ракия</span>
+                                <span class="radio-label" id="alcohol-rakia">Ракия</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="alcohol" value="vino">
-                                <span class="radio-label">Вино</span>
+                                <span class="radio-label" id="alcohol-vino">Вино</span>
                             </label>
                         </li>
                         <li>
-                            <span><i class="fas fa-tint"></i> Безалкохолно:</span>
+                            <span id="non-alcohol-label">Безалкохолно:</span>
                             <label class="radio-container">
                                 <input type="radio" name="non_alcohol" value="mineralna" required>
-                                <span class="radio-label">Минерална вода</span>
+                                <span class="radio-label" id="non-alcohol-mineralna">Минерална вода</span>
                             </label>
                             <label class="radio-container">
                                 <input type="radio" name="non_alcohol" value="gazirana">
-                                <span class="radio-label">Газирана напитка</span>
+                                <span class="radio-label" id="non-alcohol-gazirana">Газирана напитка</span>
                             </label>
                         </li>
                     </ul>
-                    <button type="submit" style="background-color: #8b0000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">Изпрати</button>
+                    <button type="submit" id="submit-button">Изпрати</button>
                 </form>
             </article>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Кафе-Аперитив "Силвана". Всички права запазени.</p>
-        <div class="footer-buttons">
-            <a href="./privacy.html" class="footer-button">Политика за конфиденциалност</a>
-            <a href="./terms.html" class="footer-button">Условия за ползване</a>
-        </div>
     </footer>
+    <script>
+        const translations = {
+            en: {
+                title: "Christmas Banquet at Cafe-Aperitif Silvana",
+                date: "27.12.2024 and 28.12.2024",
+                menuTitle: "Our Holiday Menu",
+                priceNote: "Price: 25 BGN per person",
+                nameLabel: "Name:",
+                saladLabel: "Salad:",
+                saladOvcharska: "Ovcharska Salad",
+                saladSilvana: "Silvana Salad",
+                mainLabel: "Main Course:",
+                mainSvinska: "Pork Steak",
+                mainPileshka: "Chicken Steak",
+                sideLabel: "Side Dish:",
+                sidePrzeni: "French Fries",
+                sideSote: "Sautéed Potatoes",
+                sideZelenchuci: "Steamed Vegetables",
+                alcoholLabel: "Alcohol:",
+                alcoholRakia: "Rakia",
+                alcoholVino: "Wine",
+                nonAlcoholLabel: "Non-Alcoholic:",
+                nonAlcoholMineralna: "Mineral Water",
+                nonAlcoholGazirana: "Sparkling Drink",
+                submitButton: "Submit"
+            },
+            bg: {
+                title: "Коледен банкет в Кафе-Аперитив \"Силвана\"",
+                date: "27.12.2024 и 28.12.2024",
+                menuTitle: "Нашето празнично меню",
+                priceNote: "Цена: 25 лв. на човек",
+                nameLabel: "Име:",
+                saladLabel: "Салата:",
+                saladOvcharska: "Овчарска",
+                saladSilvana: "Салата Силвана",
+                mainLabel: "Основно:",
+                mainSvinska: "Свинска пържола",
+                mainPileshka: "Пилешка пържола",
+                sideLabel: "Гарнитура:",
+                sidePrzeni: "Пържени картофи",
+                sideSote: "Картофи соте",
+                sideZelenchuci: "Задушени зеленчуци",
+                alcoholLabel: "Алкохол:",
+                alcoholRakia: "Ракия",
+                alcoholVino: "Вино",
+                nonAlcoholLabel: "Безалкохолно:",
+                nonAlcoholMineralna: "Минерална вода",
+                nonAlcoholGazirana: "Газирана напитка",
+                submitButton: "Изпрати"
+            }
+        };
+
+        document.getElementById("btn-bg").addEventListener("click", () => setLanguage("bg"));
+        document.getElementById("btn-en").addEventListener("click", () => setLanguage("en"));
+
+        function setLanguage(lang) {
+            document.getElementById("page-title").textContent = translations[lang].title;
+            document.getElementById("event-date").textContent = translations[lang].date;
+            document.getElementById("menu-title").textContent = translations[lang].menuTitle;
+            document.getElementById("price-note").textContent = translations[lang].priceNote;
+            document.getElementById("name-label").textContent = translations[lang].nameLabel;
+            document.getElementById("salad-label").textContent = translations[lang].saladLabel;
+            document.getElementById("salad-ovcharska").textContent = translations[lang].saladOvcharska;
+            document.getElementById("salad-silvana").textContent = translations[lang].saladSilvana;
+            document.getElementById("main-label").textContent = translations[lang].mainLabel;
+            document.getElementById("main-svinska").textContent = translations[lang].mainSvinska;
+            document.getElementById("main-pileshka").textContent = translations[lang].mainPileshka;
+            document.getElementById("side-label").textContent = translations[lang].sideLabel;
+            document.getElementById("side-przeni").textContent = translations[lang].sidePrzeni;
+            document.getElementById("side-sote").textContent = translations[lang].sideSote;
+            document.getElementById("side-zelenchuci").textContent = translations[lang].sideZelenchuci;
+            document.getElementById("alcohol-label").textContent = translations[lang].alcoholLabel;
+            document.getElementById("alcohol-rakia").textContent = translations[lang].alcoholRakia;
+            document.getElementById("alcohol-vino").textContent = translations[lang].alcoholVino;
+            document.getElementById("non-alcohol-label").textContent = translations[lang].nonAlcoholLabel;
+            document.getElementById("non-alcohol-mineralna").textContent = translations[lang].nonAlcoholMineralna;
+            document.getElementById("non-alcohol-gazirana").textContent = translations[lang].nonAlcoholGazirana;
+            document.getElementById("submit-button").textContent = translations[lang].submitButton;
+        }
+    </script>
 </body>
 </html>
