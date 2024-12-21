@@ -1,13 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин</title>
+    <title>Магазин Силвана</title>
+    <link rel="stylesheet" href="magazin.css">
 </head>
 <body>
-    <h1>Тук ще бъде магазина :)</h1>
-
-    <a href="../../index.html"><button>Назад</button></a>
+    <header>
+        <h1>Магазин Силвана</h1>
+        <p>Най-доброто място за свежи продукти!</p>
+    </header>
+    <nav>
+        <a href="#">Начало</a>
+        <a href="#">Продукти</a>
+        <a href="#">За нас</a>
+        <a href="#">Контакти</a>
+    </nav>
+    <main>
+        <section class="promotions">
+            <h2>Седмични промоции</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Ябълки">
+                <h3>Ябълки</h3>
+                <p>Стара цена: <s>3.00 лв/кг</s></p>
+                <p>Промо цена: 2.50 лв/кг</p>
+                <button onclick="addToCart('Ябълки')">Купи</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Мляко">
+                <h3>Мляко</h3>
+                <p>Стара цена: <s>1.50 лв/л</s></p>
+                <p>Промо цена: 1.20 лв/л</p>
+                <button onclick="addToCart('Мляко')">Купи</button>
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2024 Магазин Силвана</p>
+    </footer>
+    <script src="magazin.js"></script>
 </body>
 </html>
