@@ -134,3 +134,17 @@ footer {
 .promotions .product button:hover {
     background-color: #45a049;
 }
+@media (max-width: 480px) {
+    .promotions .product {
+        margin: 15px auto;
+        width: 100%;
+    }
+
+    .promotions h2 {
+        font-size: 18px;
+    }
+
+    .promotions .product button {
+        padding: 8px 16px;
+    }
+}
