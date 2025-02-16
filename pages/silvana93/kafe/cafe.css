@@ -59,22 +59,50 @@ nav ul li a.active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.menu-section {
+.menu-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-button {
+    position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.menu-image {
-    width: 150px;
+    justify-content: center;
     height: 150px;
-    object-fit: cover;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
-    margin-right: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-items {
-    flex: 1;
+.menu-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.menu-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.menu-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -192,6 +220,10 @@ footer {
 .text-right {
     flex: 1;
     min-width: 250px;
+}
+
+.spacing {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
