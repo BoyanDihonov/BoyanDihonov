@@ -1,4 +1,3 @@
-/* Общо оформление */
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +9,14 @@ body {
     background-image: url('./background.jpg');
     background-size: cover;
     background-position: center;
-    color: #f4f4f4; /* Светъл текст */
-    text-align: left; /* Изравняваме текста наляво */
+    color: #f4f4f4;
+    text-align: left;
     padding: 50px;
 }
 
-
-/* Заглавие на страницата */
 header h1 {
     font-size: 3em;
-    color: #1e90ff; /* Син акцент */
+    color: #1e90ff;
     margin-bottom: 10px;
 }
 
@@ -34,7 +31,6 @@ header .tagline {
     color: #ddd;
 }
 
-/* Услуги */
 .services h3 {
     font-size: 2em;
     color: #1e90ff;
@@ -51,7 +47,6 @@ header .tagline {
     margin: 10px 0;
 }
 
-/* Контакти */
 .contacts h3 {
     font-size: 2em;
     color: #1e90ff;
@@ -72,6 +67,7 @@ header .tagline {
 .contacts a:hover {
     text-decoration: underline;
 }
+
 @media (max-width: 768px) {
     body {
         padding: 20px;
@@ -103,7 +99,6 @@ header .tagline {
     }
 }
 
-/* За телефони */
 @media (max-width: 480px) {
     body {
         padding: 15px;
