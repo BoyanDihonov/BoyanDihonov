@@ -148,3 +148,37 @@ header .tagline {
         justify-content: center;
     }
 }
+.services-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.select-services {
+    background: #ff4500;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.select-services:hover {
+    background: #e03e00;
+}
+.back {
+    background: #dc3545;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.back:hover {
+    background: #c82333;
+}
