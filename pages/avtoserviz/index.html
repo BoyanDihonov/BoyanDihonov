@@ -25,34 +25,29 @@
                     Автобояджийски услуги
                     <p class="description">
                         Възстановете перфектния вид на автомобила си!  
-                        Нашето експертно боядисване не просто освежава – то придава ново излъчване и безупречен завършек.
+                        Нашето експертно боядисване придава ново излъчване и безупречен завършек.
                     </p>
                 </div>
                 <div class="service-item" onclick="toggleDescription(1)">
                     Професионално полиране и пастиране
                     <p class="description">
                         Забравете за драскотините и матирания лак!  
-                        Вашият автомобил ще заблести като в деня, в който го взехте от автосалона.
+                        Вашият автомобил ще заблести като нов.
                     </p>
                 </div>
                 <div class="service-item" onclick="toggleDescription(2)">
                     Пране и дезинфекция на салон
                     <p class="description">
-                        Освежете интериора на колата си до съвършенство!  
                         Дълбокото почистване не само премахва замърсяванията, но и създава усещане за нов автомобил.
                     </p>
                 </div>
                 <div class="service-item" onclick="toggleDescription(3)">
                     Почистване на кожен или велурен интериор
                     <p class="description">
-                        Луксът изисква грижа!  
-                        Подхранваме кожата, възстановяваме мекотата на велура и оставяме интериора ви в безупречно състояние.
+                        Подхранваме кожата, възстановяваме мекотата на велура и оставяме интериора ви безупречен.
                     </p>
                 </div>
             </div>
-            <!-- <div class="services-button">
-                <a href="services.html" class="contact-btn select-services">Избери услуги</a>
-            </div> -->
         </div>
     </section>
 
@@ -78,8 +73,7 @@
 
     <script>
         function toggleDescription(index) {
-            let descriptions = document.querySelectorAll('.description');
-            descriptions[index].classList.toggle('active');
+            document.querySelectorAll('.description')[index].classList.toggle('active');
         }
     </script>
 </body>
