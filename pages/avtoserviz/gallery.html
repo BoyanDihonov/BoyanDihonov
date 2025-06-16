@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерия – Боян Дихонов</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Галерия</h1>
+  <div class="gallery" id="gallery"></div>
+
+  <div id="lightbox" class="lightbox" style="display:none;">
+    <button id="closeBtn" class="lightbox-close">&times;</button>
+    <button id="prevBtn" class="lightbox-arrow lightbox-prev">&#10094;</button>
+    <img id="lightboxImage" src="" alt="Галерия" />
+    <button id="nextBtn" class="lightbox-arrow lightbox-next">&#10095;</button>
+  </div>
+
+  <script>
+    const galleryContainer = document.getElementById('gallery');
+    const maxImages = 1000;
+    const imageFolder = 'img/gallery/';
+    const imageExtension = 'jpg';
+    const images = [];
+
+    for (let i = 1; i <= maxImages; i++) {
+      const img = new Image();
+      img.src = `${imageFolder}${i}.${imageExtension}`;
+      img.dataset.index = i - 1;
+      img.onload = () => {
+        img.classList.add('gallery-image');
+        galleryContainer.appendChild(img);
+        images.push(img.src);
+        img.addEventListener('click', () => openLightbox(img.dataset.index));
+      };
+    }
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = Number(index);
+      lightboxImage.src = images[currentIndex];
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      lightboxImage.src = images[currentIndex];
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      lightboxImage.src = images[currentIndex];
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
