@@ -1,83 +1,94 @@
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автосервиз - Боян Дихонов</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="header-bg">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Автосервиз - Боян Дихонов</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-bg">
+                <div class="container">
+                    <h1><span class="blue-text">Боян Дихонов</span></h1>
+                    <h2>Козметични услуги за автомобили</h2>
+                    <p class="tagline">Качество и прецизност</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="services">
             <div class="container">
-                <h1><span class="blue-text">Боян Дихонов</span></h1>
-                <h2>Козметични услуги за автомобили</h2>
-                <p class="tagline">Качество и прецизност</p>
+                <h2>Предлагани услуги</h2>
+                <div class="service-list">
+                    <div class="service-item" onclick="toggleDescription(0)">
+                        Автобояджийски услуги
+                        <p class="description">
+                            Възстановете перфектния вид на автомобила си!
+                            Нашето експертно боядисване придава ново излъчване и безупречен завършек.
+                        </p>
+                    </div>
+                    <div class="service-item" onclick="toggleDescription(1)">
+                        Професионално полиране и пастиране
+                        <p class="description">
+                            Забравете за драскотините и матирания лак!
+                            Вашият автомобил ще заблести като нов.
+                        </p>
+                    </div>
+                    <div class="service-item" onclick="toggleDescription(2)">
+                        Пране и дезинфекция на салон
+                        <p class="description">
+                            Дълбокото почистване не само премахва замърсяванията, но и създава усещане за нов автомобил.
+                        </p>
+                    </div>
+                    <div class="service-item" onclick="toggleDescription(3)">
+                        Почистване на кожен или велурен интериор
+                        <p class="description">
+                            Подхранваме кожата, възстановяваме мекотата на велура и оставяме интериора ви безупречен.
+                        </p>
+                    </div>
+                    <div class="service-item" onclick="toggleDescription(4)">
+                        Озониране
+                        <p class="description">
+                            Елиминира неприятни миризми, бактерии и плесени. Осигурява свеж и здравословен въздух в
+                            купето.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
+            <div class="services-button">
+                <a href="services.html" class="select-services">Виж цените</a>
+                <a href="subscriptions.html" class="select-services">Абонаментна поддръжка</a>
+            </div>
+        </section>
 
-    <section class="services">
-        <div class="container">
-            <h2>Предлагани услуги</h2>
-            <div class="service-list">
-                <div class="service-item" onclick="toggleDescription(0)">
-                    Автобояджийски услуги
-                    <p class="description">
-                        Възстановете перфектния вид на автомобила си!  
-                        Нашето експертно боядисване придава ново излъчване и безупречен завършек.
-                    </p>
-                </div>
-                <div class="service-item" onclick="toggleDescription(1)">
-                    Професионално полиране и пастиране
-                    <p class="description">
-                        Забравете за драскотините и матирания лак!  
-                        Вашият автомобил ще заблести като нов.
-                    </p>
-                </div>
-                <div class="service-item" onclick="toggleDescription(2)">
-                    Пране и дезинфекция на салон
-                    <p class="description">
-                        Дълбокото почистване не само премахва замърсяванията, но и създава усещане за нов автомобил.
-                    </p>
-                </div>
-                <div class="service-item" onclick="toggleDescription(3)">
-                    Почистване на кожен или велурен интериор
-                    <p class="description">
-                        Подхранваме кожата, възстановяваме мекотата на велура и оставяме интериора ви безупречен.
-                    </p>
+        <section class="contacts">
+            <div class="container">
+                <h2>Контакти</h2>
+                <div class="contact-buttons">
+                    <a href="tel:+359885621218" class="contact-btn phone">
+                        <img src="img/phone.svg" alt="Телефон"> Обади се
+                    </a>
+                    <a href="mailto:boyandihonov@gmail.com" class="contact-btn email">
+                        <img src="img/email.svg" alt="E-mail"> E-mail
+                    </a>
+                    <a href="viber://chat?number=+359885621218" class="contact-btn viber">
+                        <img src="img/viber.svg" alt="Viber"> Viber
+                    </a>
+                    <a href="https://m.me/BoyanDihonov" target="_blank" class="contact-btn messenger">
+                        <img src="img/messenger.svg" alt="Messenger"> Messenger
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="services-button">
-            <a href="services.html" class="select-services">Виж цените</a>
-        </div>
-    </section>
+        </section>
 
-    <section class="contacts">
-        <div class="container">
-            <h2>Контакти</h2>
-            <div class="contact-buttons">
-                <a href="tel:+359885621218" class="contact-btn phone">
-                    <img src="img/phone.svg" alt="Телефон"> Обади се
-                </a>
-                <a href="mailto:boyandihonov@gmail.com" class="contact-btn email">
-                    <img src="img/email.svg" alt="E-mail"> E-mail
-                </a>
-                <a href="viber://chat?number=+359885621218" class="contact-btn viber">
-                    <img src="img/viber.svg" alt="Viber"> Viber
-                </a>
-                <a href="https://m.me/BoyanDihonov" target="_blank" class="contact-btn messenger">
-                    <img src="img/messenger.svg" alt="Messenger"> Messenger
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        function toggleDescription(index) {
-            document.querySelectorAll('.description')[index].classList.toggle('active');
-        }
-    </script>
-</body>
+        <script>
+            function toggleDescription(index) {
+                document.querySelectorAll('.description')[index].classList.toggle('active');
+            }
+        </script>
+    </body>
+
 </html>
