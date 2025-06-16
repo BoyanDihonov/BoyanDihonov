@@ -188,3 +188,19 @@ header .tagline {
 .services-button a {
     margin: 10px;
 }
+.subscription-note {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #222;
+    border-left: 5px solid #ff4500;
+    color: #fff;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+.subscription-note h3 {
+    color: #ff4500;
+    margin-bottom: 10px;
+}
