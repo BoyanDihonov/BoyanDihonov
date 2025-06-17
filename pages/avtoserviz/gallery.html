@@ -8,6 +8,8 @@
 </head>
 <body>
   <h1>Галерия</h1>
+  <a href="index.html" class="back">Назад</a>
+
   <div class="gallery" id="gallery"></div>
 
   <div id="lightbox" class="lightbox" style="display:none;">
@@ -27,9 +29,11 @@
     for (let i = 1; i <= maxImages; i++) {
       const img = new Image();
       img.src = `${imageFolder}${i}.${imageExtension}`;
+      img.loading = "lazy";
       img.dataset.index = i - 1;
+      img.classList.add('gallery-image');
+
       img.onload = () => {
-        img.classList.add('gallery-image');
         galleryContainer.appendChild(img);
         images.push(img.src);
         img.addEventListener('click', () => openLightbox(img.dataset.index));
